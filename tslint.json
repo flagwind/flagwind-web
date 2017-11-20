@@ -1,0 +1,209 @@
+{
+    "rules": 
+    {
+        // 限定文件头必须拥有注释
+        "file-header": [true, "@author"],
+
+        // 限定文件编码必须为 utf-8
+        "encoding": true,
+
+        // 必须在每一行末加上分号
+        "semicolon": [true, "always"],
+
+        // 限定在文件末加一个空行
+        "eofline": true,
+
+        // 采用 jsdoc 校验注释
+        "jsdoc-format": true,
+
+        // 采用 4 个空格缩进
+        "indent": [true, "spaces", 4],
+
+        // 限定代码必须对齐
+        "align": [true, "parameters", "arguments", "statements", "members", "elements"],
+
+        // 禁止使用 var 关键字
+        "no-var-keyword": true,
+
+        // 限定变量命名规则（禁止使用TS关键字，小驼峰，允许带下划线_）
+        "variable-name": [true, "ban-keywords", "check-format", "allow-leading-underscore"],
+
+        // 限定接口名称必须以大写字母 "I" 开头
+        "interface-name": [true, "always-prefix"],
+
+        // 限定类名首字母必须大写
+        "class-name": true,
+
+        // 禁止在代码中使用常数值，应该使用枚举，或定义为常量
+        "no-magic-numbers": [true, -1, 0, 1],
+
+        // 禁止使用 var module = require("module") 这种引用方式，而应该使用 import foo = require('foo') 这种方式
+        "no-var-requires": true,
+
+        // 禁止定义空接口
+        "no-empty-interface": true,
+
+        // 限定泛型数组必须使用Array<T>这种方式，而不应采用 T[]
+        "array-type": [true, "generic"],
+
+        // 允许变量在同一个申明语句中定义
+        "one-variable-per-declaration": false,
+        
+        // 禁止不使用 new 运算符调用构造方法
+        "new-parens": true,
+
+        // 限定使用 for...in 语句遍历成员。
+        "forin": true,
+
+        // 禁止出现多余的空白行
+        "no-consecutive-blank-lines": [true, 1],
+
+        // 禁止使用内部模块
+        "no-internal-module": true,
+
+        // 限定 switch 语句中的 case 必须带 break 或 return 结束
+        "switch-final-break": [true, "always"],
+        
+        // 禁止在 finally 语句中使用 return continue break throws
+        "no-unsafe-finally": true,
+        
+        // 限定字符串的包裹必须采用双引号
+        "quotemark": [true, "double", "avoid-escape", "avoid-template"],
+
+        // 禁止使用 new Number(val) 的方式使用基础类型的包装类，但不限定 Number(val) 这种方式
+        "no-construct": true,
+
+        // 禁止使用 "arguments.callee"
+        "no-arg": true,
+        
+        // 禁止使用 import 语句多次引用同一个模块
+        "no-duplicate-imports": true,
+
+        // if/for/do/while 语句必须要用花括号括起来
+        "curly": [true, "ignore-same-line"],
+
+        // 禁止在同一作用域申明相同的变量
+        "no-duplicate-variable": [true, "check-parameters"],
+
+        // 禁止使用空代码块
+        "no-empty": true,
+
+        // 禁止使用 eval 函数
+        "no-eval": true,
+
+        // 禁止使用 <reference types="foo" /> 引入模块
+        "no-reference-import": true,
+
+        // 不允许在返回语句后面使用 await 语句
+        "no-return-await": true,
+        
+        // 限定表达式语句的使用
+        "no-unused-expression": [true, "allow-fast-null-checks", "allow-tagged-template"],
+
+        // 禁止在圆括号左右使用空格
+        "space-within-parens": [true, 0],
+
+        // 限定使用 "===" 和 "!==" 替换 "==" 和 "!="
+        "triple-equals": [true, "allow-null-check"],
+
+        // 限定使用 "isNaN()" 函数判断值是否为 NaN
+        "use-isnan": true,
+
+        // 限定必须使用  as Type 语句做类型转换
+        // "no-angle-bracket-type-assertion": true,
+
+        // 尽在在接口中定义构造函数
+        "no-misused-new": true,
+
+        // 限定字符串的连接方式
+        "no-string-throw": true,
+        
+        // 限定必须使用箭头函数做函数表达式
+        "only-arrow-functions": false,
+
+        // 限定简化箭头函数: convert () => { return x; } to () => x
+        "arrow-return-shorthand": true,
+
+        // 限定箭头函数的参数必须用圆括号包裹起来
+        "arrow-parens": [true, "ban-single-arg-parens"],
+
+        // 限定 import 语句必须用空格分隔
+        "import-spacing": true,
+
+        // 限定单行注释必须添加空格
+        "comment-format": [true, "check-space"],
+
+        // 禁止在行尾出现多余的空格
+        "no-trailing-whitespace": [true, "ignore-blank-lines", "ignore-jsdoc", "ignore-comments"],
+
+        // 禁止在数组或字面量对象的末尾出现多余的逗号
+        "trailing-comma": [true, {"multiline": "never", "singleline": "never"}],
+
+        // 限定空格约束
+        "whitespace": 
+        [
+            true,
+            "check-decl",                   // 变量申明前后必须带空格
+            "check-operator",               // 操作符前后必须带空格
+            "check-module",                 // 模块导入导出必须带空格
+            "check-rest-spread",            // ...后不允许带空格
+            "check-type",                   // 类型前后必须带空格
+            //"check-typecast",               // 类型转换必须带空格
+            "check-type-operator",          // 类型操作必须带空格
+            "check-preblock"                
+        ],
+        "typedef-whitespace": 
+        [
+            true,
+            {
+                "call-signature": "nospace",
+                "index-signature": "nospace",
+                "parameter": "nospace",
+                "property-declaration": "nospace",
+                "variable-declaration": "nospace"
+            },
+            {
+                "call-signature": "onespace",
+                "index-signature": "onespace",
+                "parameter": "onespace",
+                "property-declaration": "onespace",
+                "variable-declaration": "onespace"
+            }
+        ],
+
+        // 限定类型成员必须用分号分隔
+        "type-literal-delimiter": true,
+
+        // 禁止在构造方法中出现多次 super() 调用
+        "no-duplicate-super": true,
+
+        // 限定必须申明成员的访问修饰符
+        "member-access": [true, "check-accessor", "check-constructor", "check-parameter-property"],
+
+        // 限定类成员排序规则
+        "member-ordering": 
+        [
+            true,
+            {
+                "order": 
+                [
+                    "private-instance-field",                       // 1.私有实例字段
+                    "private-static-field",                         // 2.私有静态字段
+                    "protected-instance-field",                     // 3.保护实例字段
+                    "protected-static-field",                       // 4.保护静态字段
+                    "public-instance-field",                        // 5.公共实例字段
+                    "public-static-field",                          // 6.公共静态字段
+                    "public-constructor",                           // 7.公共构造方法
+                    "protected-constructor",                        // 8.保护构造方法
+                    "private-constructor",                          // 9.私有构造方法
+                    "public-instance-method",                       // 10.公共实例方法
+                    "protected-instance-method",                    // 11.保护实例方法
+                    "private-instance-method",                      // 12.私有实例方法
+                    "public-static-method",                         // 23.公共静态方法
+                    "protected-static-method",                      // 24.保护静态方法
+                    "private-static-method"                         // 25.私有静态方法
+                ]
+            }
+        ]
+    }
+}
