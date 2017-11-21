@@ -8,10 +8,41 @@
  * @copyright Copyright (C) 2010-2017 Flagwind Inc. All rights reserved. 
  */
 
-import Vue from "vue";
+// import Vue from "vue";
 // import VueRouter from "vue-router";
 
-console.log(Vue);
+// import { EventArgs } from "flagwind-core";
+// import { EventProvider } from "../src/events/event_provider";
 
-// 开启debug模式
-// Vue.config.debug = true;
+// let student =
+// {
+//     name: "student",
+
+//     onClick(e: EventArgs)
+//     {
+//         console.log(this.name);
+//         console.log(e);
+//         // console.log(e);
+//     }
+// };
+
+// let employee =
+// {
+//     name: "employee",
+    
+//     onClick(e: EventArgs)
+//     {
+//         console.log(this.name);
+//         // console.log(e);
+//     }
+// };
+
+// let event = new EventProvider();
+
+// event.addListener("click", student.onClick, student);
+// event.dispatchEvent("click", "aaaa");
+
+// // event.dispatchEvent("click", "lalala");
+
+// // event.removeListener("click", student.onClick, student);
+// console.log(event.hasListener("click"));

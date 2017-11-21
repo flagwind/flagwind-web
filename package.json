@@ -29,7 +29,7 @@
         "url": "https://github.com/flagwind/flagwind-web/issues"
     },
     "dependencies": {
-        "flagwind-core": "^1.0.0"
+        "flagwind-core": "^1.0.1"
     },
     "devDependencies": {
         "@types/chai": "^4.0.4",
