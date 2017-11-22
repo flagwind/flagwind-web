@@ -4,15 +4,13 @@
 </template>
 
 <script lang="ts">
-    module.exports = {
-        data() {
-            return {
+module.exports = {
+  data() {
+    return {};
+  },
 
-            }
-        },
-        
-        mounted() {
-            console.log("sfasdf");
-        }
-    }
+  mounted() {
+    console.log("sfasdf");
+  }
+};
 </script>

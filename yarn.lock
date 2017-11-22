@@ -2499,7 +2499,7 @@ flagged-respawn@^0.3.2:
 
 flagwind-core@^1.0.1:
   version "1.0.1"
-  resolved "http://116.62.155.198:8866/flagwind-core/-/flagwind-core-1.0.1.tgz#194e21580236d46a69ccae44f66506fe9eee69c5"
+  resolved "http://116.62.155.198:8866/flagwind-core/-/flagwind-core-1.0.1.tgz#a9b3e790b47a31738e88f8535a3016e973a631ac"
 
 flatten@^1.0.2:
   version "1.0.2"
