@@ -4,19 +4,20 @@ module.exports = function(config)
 {
     config.set
     ({
-        browsers: ["PhantomJS"],
+        // browsers: ["PhantomJS", "ChromeHeadless"],
+        browsers: ["ChromeHeadless"],
         
         frameworks: ["mocha", "sinon-chai", "phantomjs-shim"],
         
         reporters: ["spec", "coverage"],
-        
+            
         files: ["./index.js"],
         
         preprocessors:
         {
             "./index.js": ["webpack", "sourcemap"]
         },
-
+        
         webpack: webpackConfig,
         
         webpackMiddleware:

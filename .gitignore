@@ -16,5 +16,5 @@
 .vscode
 .svn/
 node_modules/
-typings/
 dist/
+/test/unit/coverage/

@@ -8,8 +8,10 @@
  * @copyright Copyright (C) 2010-2017 Flagwind Inc. All rights reserved. 
  */
 
-// import Vue from "vue";
+import Vue from "vue";
 // import VueRouter from "vue-router";
+
+console.log(Vue);
 
 // import { EventArgs } from "flagwind-core";
 

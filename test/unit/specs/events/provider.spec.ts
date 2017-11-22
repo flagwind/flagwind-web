@@ -23,8 +23,8 @@ describe("EventProviderTest", () =>
 
     it("sourceTest", () => 
     {
-        // const eventArgs = new EventArgs("click");
-        // const provider = new EventProvider(null);
+        const eventArgs = new EventArgs("click");
+        const provider = new EventProvider(null);
 
         assert.equal(1, 1);
 

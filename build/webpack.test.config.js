@@ -3,7 +3,7 @@ const webpack = require("webpack");
 const merge = require("webpack-merge");
 const baseConfig = require("./webpack.base.config");
 
-module.exports = merge(baseConfig,
+const webpackConfig = merge(baseConfig,
 {
     plugins:
     [
@@ -16,3 +16,7 @@ module.exports = merge(baseConfig,
         })
     ]
 });
+
+delete webpackConfig.entry;
+
+module.exports = webpackConfig;
