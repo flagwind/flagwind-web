@@ -3,8 +3,6 @@ const webpack = require("webpack");
 const merge = require("webpack-merge");
 const webpackBaseConfig = require("./webpack.base.config");
 
-process.env.NODE_ENV = "production";
-
 module.exports = merge(webpackBaseConfig,
 {
     entry:
@@ -36,7 +34,7 @@ module.exports = merge(webpackBaseConfig,
         ({
             "process.env":
             {
-                NODE_ENV: "production"
+                NODE_ENV: '"production"'
             }
         })
     ]

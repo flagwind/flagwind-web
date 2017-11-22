@@ -12,7 +12,6 @@
 // import VueRouter from "vue-router";
 
 // import { EventArgs } from "flagwind-core";
-// import { EventProvider } from "../src/events/event_provider";
 
 // let student =
 // {

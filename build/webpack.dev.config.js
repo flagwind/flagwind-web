@@ -26,13 +26,13 @@ module.exports = webpackMerge(webpackBaseConfig,
     },
     plugins: 
     [
+        new FriendlyErrorsPlugin(),
         new webpack.optimize.CommonsChunkPlugin({ name: "vendors", filename: "vendor.bundle.js" }),
         new HtmlWebpackPlugin
         ({
             inject: true,
             filename: path.join(__dirname, "../examples/dist/index.html"),
             template: path.join(__dirname, "../examples/index.html")
-        }),
-        new FriendlyErrorsPlugin()
+        })
     ]
 });

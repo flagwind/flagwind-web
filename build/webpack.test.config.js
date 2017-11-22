@@ -9,7 +9,10 @@ module.exports = merge(baseConfig,
     [
         new webpack.DefinePlugin
         ({
-            "process.env.NODE_ENV": "testing"
+            "process.env":
+            {
+                NODE_ENV: '"testing"'
+            }
         })
     ]
 });

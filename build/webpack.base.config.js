@@ -13,7 +13,7 @@ module.exports =
         extensions: [".js", ".vue", ".json", ".ts"],
         alias:
         {
-            "vue": "vue/dist/vue.esm.js",
+            "vue$": "vue/dist/vue.esm.js",
             "@": resolve("src")
         }
     },
@@ -38,6 +38,7 @@ module.exports =
             {
                 test: /\.js$/,
                 loader: "babel-loader",
+                include: [resolve("src"), resolve("test")],
                 exclude: /node_modules/
             },
             {

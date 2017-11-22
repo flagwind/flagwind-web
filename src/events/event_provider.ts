@@ -31,10 +31,10 @@ export class EventProvider implements IEventProvider
     {
         // 采用 Vue 自身的发布订阅作为事件代理
         this._proxy = new Vue();
-
+        
         // 保存事件源对象
         this._source = source || this;
-
+        
         // 初始化事件监听器元组列表
         this._events = new Map<string, Set<[Function, Function]>>();
     }
