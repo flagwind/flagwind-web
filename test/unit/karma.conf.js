@@ -6,6 +6,7 @@ module.exports = function(config)
     ({
         // browsers: ["PhantomJS", "ChromeHeadless"],
         browsers: ["ChromeHeadless"],
+        // browsers: ["PhantomJS"],
         
         frameworks: ["mocha", "sinon-chai", "phantomjs-shim"],
         
@@ -20,9 +21,25 @@ module.exports = function(config)
         
         webpack: webpackConfig,
         
+        // webpackMiddleware:
+        // {
+        //     noInfo: true
+        // },
+
         webpackMiddleware:
         {
-            noInfo: true
+            quiet: false,
+            noInfo: true,
+            stats:
+            {
+                assets: false,
+                colors: true,
+                version: false,
+                hash: false,
+                timings: false,
+                chunks: false,
+                chunkModules: false
+            }
         },
         
         coverageReporter:
