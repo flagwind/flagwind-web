@@ -1,4 +1,6 @@
-/**
+/*!
+ * @file This file is part of `decorators` module. 
+ * 
  * Authors:
  *      @author jason <jasonsoop@gmail.com>
  * 
@@ -6,4 +8,4 @@
  * @copyright Copyright (C) 2010-2017 Flagwind Inc. All rights reserved. 
  */
 
-// export * from "./decorators";
+// export * from "./vue";

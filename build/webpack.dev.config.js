@@ -10,7 +10,7 @@ module.exports = webpackMerge(webpackBaseConfig,
     entry: 
     {
         main: "./examples/main",
-        vendors: ["vue", "vue-router"]
+        vendors: ["vue", "vue-router", "flagwind-core"]
     },
     output: 
     {
@@ -18,11 +18,6 @@ module.exports = webpackMerge(webpackBaseConfig,
         publicPath: "",
         filename: "[name].js",
         chunkFilename: "[name].chunk.js"
-    },
-    resolve: {
-        alias: {
-            vue: "vue/dist/vue.esm.js"
-        }
     },
     plugins: 
     [

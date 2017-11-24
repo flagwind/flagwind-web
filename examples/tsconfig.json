@@ -1,0 +1,25 @@
+{
+    "include": 
+    [
+        "./**/*"
+    ],
+    "compilerOptions": 
+    {
+        "allowSyntheticDefaultImports": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "allowJs": true,
+        "module": "esnext",
+        "target": "es5",
+        "moduleResolution": "node",
+        "isolatedModules": true,
+        "sourceMap": true,
+        "pretty": true,
+        "lib": 
+        [
+            "dom",
+            "es5",
+            "es2015.promise"
+        ]
+    }
+}

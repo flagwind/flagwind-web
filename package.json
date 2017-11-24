@@ -4,7 +4,7 @@
     "description": "flagwind web library",
     "author": "jason <jasonsoop@gmail.com>",
     "scripts": {
-        "dev": "webpack-dev-server --content-base test/ --open --inline --hot --compress --history-api-fallback --port 8083 --config build/webpack.dev.config.js",
+        "dev": "webpack-dev-server --content-base test/ --open --inline --hot --compress --history-api-fallback --port 8010 --config build/webpack.dev.config.js",
         "dist:debug": "webpack --config build/webpack.dist.debug.config.js",
         "dist:release": "webpack --config build/webpack.dist.release.config.js",
         "dist": "npm run dist:debug && npm run dist:release",
@@ -31,7 +31,8 @@
         "url": "https://github.com/flagwind/flagwind-web/issues"
     },
     "dependencies": {
-        "flagwind-core": "^1.0.1"
+        "flagwind-core": "^1.0.1",
+        "vue-property-decorator": "^6.0.0"
     },
     "devDependencies": {
         "@types/chai": "^4.0.4",
