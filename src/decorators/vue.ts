@@ -8,4 +8,4 @@
  * @copyright Copyright (C) 2010-2017 Flagwind Inc. All rights reserved. 
  */
 
-// export { Component as component, Inject as inject, Model as model, Prop as property, Provide as provider, Watch as watch } from "vue-property-decorator";
+export { Component as component, Inject as inject, Model as model, Prop as property, Provide as provider, Watch as watch } from "vue-property-decorator";

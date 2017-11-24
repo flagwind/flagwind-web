@@ -12,6 +12,13 @@ module.exports = webpackMerge(webpackBaseConfig,
         main: "./examples/main",
         vendors: ["vue", "vue-router", "flagwind-core"]
     },
+    resolve:
+    {
+        alias:
+        {
+            "flagwind-web": "../../src/index"
+        }
+    },
     output: 
     {
         path: path.join(__dirname, "../examples/dist"),

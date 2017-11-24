@@ -8,4 +8,4 @@
  * @copyright Copyright (C) 2010-2017 Flagwind Inc. All rights reserved. 
  */
 
-// export * from "./vue";
+export * from "./vue";

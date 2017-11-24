@@ -20,7 +20,12 @@ import router from "../routers";
 export class Workspace implements IWorkspace
 {
     private _workbench: IWorkbench;                                 // 工作台
-
+    
+    /**
+     * 获取工作空间所属的工作台。
+     * @property
+     * @returns IWorkbench
+     */
     public get workbench(): IWorkbench
     {
         return this._workbench;
@@ -37,7 +42,7 @@ export class Workspace implements IWorkspace
         this._workbench = workbench;
 
         Vue.config.productionTip = false;
-
+        
         let x = new Vue
         ({
             el: "#workspace",

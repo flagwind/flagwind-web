@@ -13,7 +13,7 @@ import Router from "vue-router";
 
 Vue.use(Router);
 
-import HelloWorld from '../components/HelloWord';
+import Button from "../components/button.vue";
 
 export default new Router
 ({
@@ -21,8 +21,8 @@ export default new Router
     [
         {
             path: "/",
-            name: "hello",
-            component: HelloWorld
+            name: "button",
+            component: Button
         }
     ]
 });
