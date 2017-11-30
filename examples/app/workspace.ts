@@ -1,16 +1,18 @@
 /*!
- * @file This file is part of `examples` module. 
+ * This file is part of `examples` module. 
  * 
  * Authors:
- *      @author jason <jasonsoop@gmail.com>
+ *      jason <jasonsoop@gmail.com>
  * 
- * @license Licensed under the MIT License.
- * @copyright Copyright (C) 2010-2017 Flagwind Inc. All rights reserved. 
+ * Licensed under the MIT License.
+ * Copyright (C) 2010-2017 Flagwind Inc. All rights reserved. 
  */
 
 import Vue from "vue";
 import { IWorkbench, IWorkspace, IView } from "flagwind-core";
+import { RouteConfig } from "vue-router";
 import router from "../routers";
+import "../../src/styles/index.less";
 
 /**
  * 提供工作空间的常用功能。
@@ -43,16 +45,21 @@ export class Workspace implements IWorkspace
 
         Vue.config.productionTip = false;
         
+        // Vue.use(iView);
+        
         let x = new Vue
         ({
             el: "#workspace",
             router,
-            template: "<div><router-view /></div>"
+            template: '<div id="workspace"><router-view /></div>'
         });
+        
+        // x.$route
+        // x.$router.push()
         
         console.log(x);
     }
-
+    
     /**
      * 添加一个试图。
      * @param  {IView} view 试图实例。

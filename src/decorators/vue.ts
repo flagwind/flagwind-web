@@ -1,11 +1,21 @@
 /*!
- * @file This file is part of `decorators` module. 
+ * This file is part of `decorators` module. 
  * 
  * Authors:
- *      @author jason <jasonsoop@gmail.com>
+ *      jason <jasonsoop@gmail.com>
  * 
- * @license Licensed under the MIT License.
- * @copyright Copyright (C) 2010-2017 Flagwind Inc. All rights reserved. 
+ * Licensed under the MIT License.
+ * Copyright (C) 2010-2017 Flagwind Inc. All rights reserved. 
  */
 
-export { Component as component, Inject as inject, Model as model, Prop as property, Provide as provider, Watch as watch } from "vue-property-decorator";
+import Component from "vue-class-component";
+
+Component.registerHooks
+([
+    "beforeRouteEnter",
+    "beforeRouteLeave",
+    "beforeRouteUpdate"
+]);
+
+export { Component as component };
+export { Inject as inject, Model as model, Prop as prop, Provide as provide, Watch as watch } from "vue-property-decorator";

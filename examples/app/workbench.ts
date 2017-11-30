@@ -1,13 +1,15 @@
 /*!
- * @file This file is part of `examples` module. 
+ * This file is part of `examples` module. 
  * 
  * Authors:
- *      @author jason <jasonsoop@gmail.com>
+ *      jason <jasonsoop@gmail.com>
  * 
- * @license Licensed under the MIT License.
- * @copyright Copyright (C) 2010-2017 Flagwind Inc. All rights reserved. 
+ * Licensed under the MIT License.
+ * Copyright (C) 2010-2017 Flagwind Inc. All rights reserved. 
  */
 
+// import Vue from "vue";
+// import Router from "vue-router";
 import { IWorkspace, WorkbenchBase, ApplicationContextBase } from "flagwind-core";
 import { Workspace } from "./workspace";
 
@@ -25,6 +27,9 @@ export class Workbench extends WorkbenchBase
     public constructor(context: ApplicationContextBase)
     {
         super(context);
+        
+        // 安装 Vue 路由插件
+        // Vue.use(Router);
     }
     
     /**

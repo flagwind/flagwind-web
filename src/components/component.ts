@@ -1,11 +1,11 @@
 /*!
- * @file This file is part of `components` module. 
+ * This file is part of `components` module. 
  * 
  * Authors:
- *      @author jason <jasonsoop@gmail.com>
+ *      jason <jasonsoop@gmail.com>
  * 
- * @license Licensed under the MIT License.
- * @copyright Copyright (C) 2010-2017 Flagwind Inc. All rights reserved. 
+ * Licensed under the MIT License.
+ * Copyright (C) 2010-2017 Flagwind Inc. All rights reserved. 
  */
 
 import Vue from "vue";
@@ -28,9 +28,9 @@ export class Component extends Vue implements IComponent
      * @param  {boolean} once? 是否添加仅回调一次的事件侦听器，如果此参数设为 true 则在第一次回调时就自动移除监听。
      * @returns void
      */
-    public addListener(type: string, listener: Function, scope?: any, once?: boolean): void
+    public addListener(type: string, listener: Function, scope: any = this, once: boolean = false): void
     {
-        // todo
+        // this.$on(type, listener);
     }
     
     /**
@@ -72,7 +72,7 @@ export class Component extends Vue implements IComponent
     {
         // todo
     }
-
+    
     /**
      * 执行与释放或重置非托管资源关联的应用程序定义的任务。
      * @returns void

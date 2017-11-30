@@ -1,7 +1,6 @@
 <template>
-    <div class="hello">
-        <h1>button example view</h1>
-        <hr />
+    <div class="button">
+        <button>这是一个按钮</button>
     </div>
 </template>
 
@@ -12,10 +11,8 @@ import { component, Component } from "../../src/index";
 @component
 export default class Button extends Component
 {
-    protected mounted(): void
-    {
-        
-    }
+    
 }
 
 </script>
+

@@ -2,7 +2,7 @@
     "rules": 
     {
         // 限定文件头必须拥有注释
-        "file-header": [true, "@author"],
+        "file-header": [true, "Copyright"],
 
         // 限定文件编码必须为 utf-8
         "encoding": true,
