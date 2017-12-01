@@ -6,4 +6,5 @@
  * Copyright (C) 2010-2017 Flagwind Inc. All rights reserved. 
  */
 
-export { default } from "./main";
+export { RouteModule } from "./route_module";
+export { ComponentModule } from "./component_module";

@@ -2519,7 +2519,7 @@ flagged-respawn@^0.3.2:
 
 flagwind-core@^1.0.1:
   version "1.0.1"
-  resolved "http://116.62.155.198:8866/flagwind-core/-/flagwind-core-1.0.1.tgz#42c2f76e6b5e7e88335a18e231fabeb6762c31ed"
+  resolved "http://116.62.155.198:8866/flagwind-core/-/flagwind-core-1.0.1.tgz#a0f731fe194de776ee2effa2303a51f886f3c424"
 
 flatten@^1.0.2:
   version "1.0.2"
@@ -6269,6 +6269,10 @@ ts-loader@^3.1.1:
 tslib@^1.7.1:
   version "1.8.0"
   resolved "http://registry.npm.taobao.org/tslib/download/tslib-1.8.0.tgz#dc604ebad64bcbf696d613da6c954aa0e7ea1eb6"
+
+tslint-config-flagwind@^1.0.0:
+  version "1.0.0"
+  resolved "http://registry.npm.taobao.org/tslint-config-flagwind/download/tslint-config-flagwind-1.0.0.tgz#196550cf96faf3a5820a2ea6de250a849fa979a8"
 
 tslint-loader@^3.5.3:
   version "3.5.3"

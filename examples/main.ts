@@ -7,10 +7,17 @@
  */
 
 import { Application } from "flagwind-core";
-import { ApplicationContext } from "./app/context";
+import { ApplicationContext } from "../src";
+import { RouteModule, ComponentModule } from "./modules";
 
-// 获取应用程序上下文实例
+// 获取应用上下文
 let context = ApplicationContext.current;
+
+// 注册全局组件模块
+context.modules.add(new ComponentModule());
+
+// 注册全局路由模块
+context.modules.add(new RouteModule());
 
 // 启动应用程序
 Application.start(context);

@@ -1,4 +1,6 @@
-/**
+/*!
+ * This file is part of `common` module. 
+ * 
  * Authors:
  *      jason <jasonsoop@gmail.com>
  * 
@@ -6,7 +8,5 @@
  * Copyright (C) 2010-2017 Flagwind Inc. All rights reserved. 
  */
 
-export * from "./common";
-export * from "./application";
-export * from "./decorators";
-export { default as components } from "./components";
+export { Component } from "./component";
+export { View } from "./view";

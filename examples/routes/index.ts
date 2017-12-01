@@ -1,4 +1,4 @@
-/**
+/*!
  * Authors:
  *      jason <jasonsoop@gmail.com>
  * 
@@ -6,7 +6,14 @@
  * Copyright (C) 2010-2017 Flagwind Inc. All rights reserved. 
  */
 
-export * from "./common";
-export * from "./application";
-export * from "./decorators";
-export { default as components } from "./components";
+import HomeView from "../views/home";
+
+const routes =
+[
+    {
+        path: "/",
+        component: HomeView
+    }
+];
+
+export default routes;
