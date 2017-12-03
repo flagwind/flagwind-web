@@ -8,7 +8,6 @@
  * Copyright (C) 2010-2017 Flagwind Inc. All rights reserved. 
  */
 
-import { Route } from "vue-router";
 import { Component } from "./component";
 
 /**
@@ -18,13 +17,5 @@ import { Component } from "./component";
  */
 export class View extends Component
 {
-    /**
-     * 获取当前请求的路由信息。
-     * @property
-     * @returns Route
-     */
-    public get route(): Route
-    {
-        return this.$route;
-    }
+    
 }

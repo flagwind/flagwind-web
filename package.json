@@ -32,9 +32,9 @@
         "url": "https://github.com/flagwind/flagwind-web/issues"
     },
     "dependencies": {
-        "flagwind-core": "^1.0.1",
         "iview": "^2.7.3",
-        "vue-property-decorator": "^6.0.0"
+        "vue-property-decorator": "^6.0.0",
+        "vuex-class": "^0.3.0"
     },
     "devDependencies": {
         "@types/chai": "^4.0.4",
@@ -54,6 +54,7 @@
         "es6-promise": "^4.1.1",
         "eventsource-polyfill": "^0.9.6",
         "file-loader": "^1.1.5",
+        "flagwind-core": "^1.0.1",
         "friendly-errors-webpack-plugin": "^1.6.1",
         "gulp": "^3.9.1",
         "gulp-autoprefixer": "^4.0.0",
@@ -88,12 +89,14 @@
         "typescript": "^2.6.1",
         "url-loader": "^0.6.2",
         "vue": "^2.5.7",
+        "vue-class-component": "^6.1.0",
         "vue-hot-reload-api": "^2.2.4",
         "vue-html-loader": "^1.2.4",
         "vue-loader": "^13.5.0",
         "vue-router": "^3.0.1",
         "vue-style-loader": "^3.0.3",
         "vue-template-compiler": "^2.5.7",
+        "vuex": "^3.0.1",
         "webpack": "^3.8.1",
         "webpack-dev-server": "^2.9.4",
         "webpack-merge": "^4.1.1"

@@ -8,6 +8,8 @@
  * Copyright (C) 2010-2017 Flagwind Inc. All rights reserved. 
  */
 
-export { ApplicationContext } from "./application_context";
-export { Workbench } from "./workbench";
-export { Workspace } from "./workspace";
+import ApplicationContext from "./application_context";
+import Workbench from "./workbench";
+import Workspace from "./workspace";
+
+export { ApplicationContext, Workbench, Workspace };

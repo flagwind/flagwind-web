@@ -10,14 +10,14 @@
 
 import Vue from "vue";
 import { IWorkbench } from "flagwind-core";
-import { ApplicationContext } from "./application_context";
+import ApplicationContext from "./application_context";
 
 /**
  * 提供工作空间的常用功能。
  * @class
  * @version 1.0.0
  */
-export class Workspace extends Vue
+export default class Workspace extends Vue
 {
     private _workbench: IWorkbench;
 

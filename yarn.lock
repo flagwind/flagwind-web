@@ -2519,7 +2519,7 @@ flagged-respawn@^0.3.2:
 
 flagwind-core@^1.0.1:
   version "1.0.1"
-  resolved "http://116.62.155.198:8866/flagwind-core/-/flagwind-core-1.0.1.tgz#a0f731fe194de776ee2effa2303a51f886f3c424"
+  resolved "http://registry.npm.taobao.org/flagwind-core/download/flagwind-core-1.0.1.tgz#d1538583b439e67615f35da6ff4a3338f26fad96"
 
 flatten@^1.0.2:
   version "1.0.2"
@@ -6569,7 +6569,7 @@ void-elements@^2.0.0:
   version "2.0.1"
   resolved "http://registry.npm.taobao.org/void-elements/download/void-elements-2.0.1.tgz#c066afb582bb1cb4128d60ea92392e94d5e9dbec"
 
-vue-class-component@^6.0.0:
+vue-class-component@^6.0.0, vue-class-component@^6.1.0:
   version "6.1.0"
   resolved "http://registry.npm.taobao.org/vue-class-component/download/vue-class-component-6.1.0.tgz#41a51a7991f2c0d51ff73f08436de0c2bfd934d6"
 
@@ -6637,6 +6637,14 @@ vue-template-es2015-compiler@^1.6.0:
 vue@^2.5.7:
   version "2.5.7"
   resolved "http://registry.npm.taobao.org/vue/download/vue-2.5.7.tgz#313ab26025915d9fdbc39db756548cb4bb50eb44"
+
+vuex-class@^0.3.0:
+  version "0.3.0"
+  resolved "http://registry.npm.taobao.org/vuex-class/download/vuex-class-0.3.0.tgz#25047ab042580fd4ff3e64cc76603ac217c9190d"
+
+vuex@^3.0.1:
+  version "3.0.1"
+  resolved "http://registry.npm.taobao.org/vuex/download/vuex-3.0.1.tgz#e761352ebe0af537d4bb755a9b9dc4be3df7efd2"
 
 watchpack@^1.4.0:
   version "1.4.0"

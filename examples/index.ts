@@ -7,7 +7,7 @@
  */
 
 import { Application } from "flagwind-core";
-import { ApplicationContext } from "../src";
+import { ApplicationContext } from "src/index";
 import { RouteModule, ComponentModule } from "./modules";
 
 // 获取应用上下文

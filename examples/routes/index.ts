@@ -6,13 +6,35 @@
  * Copyright (C) 2010-2017 Flagwind Inc. All rights reserved. 
  */
 
-import HomeView from "../views/home";
+import GenericLayout from "../layouts/generic.vue";
+import ContentLayout from "../layouts/content.vue";
+
+import Overview from "../views/overview.vue";
 
 const routes =
 [
     {
         path: "/",
-        component: HomeView
+        redirect: to =>
+        {
+            return "overview";
+        }
+    },
+    {
+        path: "/overview",
+        component: GenericLayout,
+        meta:
+        {
+            title: "概览",
+            icon: "pie-graph"
+        },
+        children:
+        [
+            {
+                path: "",
+                component: Overview
+            }
+        ]
     }
 ];
 

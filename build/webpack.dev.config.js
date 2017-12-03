@@ -5,18 +5,23 @@ const webpackBaseConfig = require("./webpack.base.config.js");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const FriendlyErrorsPlugin = require("friendly-errors-webpack-plugin");
 
+function resolve(dir)
+{
+    return path.join(__dirname, "..", dir);
+}
+
 module.exports = webpackMerge(webpackBaseConfig,
 {
     entry: 
     {
-        main: "./examples/main",
+        main: "./examples/index",
         vendors: ["vue", "vue-router", "flagwind-core"]
     },
     resolve:
     {
         alias:
         {
-            "flagwind-web": "../../src/index"
+            "examples": resolve("examples")
         }
     },
     output: 

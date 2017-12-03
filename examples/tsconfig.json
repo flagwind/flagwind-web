@@ -15,6 +15,11 @@
         "isolatedModules": true,
         "sourceMap": true,
         "pretty": true,
+        "baseUrl": ".",
+        "paths": {
+            "src/*": ["../src/*"],
+            "examples/*": ["./*"]
+        },
         "lib": 
         [
             "dom",

@@ -8,5 +8,4 @@
  * Copyright (C) 2010-2017 Flagwind Inc. All rights reserved. 
  */
 
-export * from "./vue";
-export * from "./vuex";
+export { State as state, Getter as getter, Action as action, Mutation as mutation, namespace } from "vuex-class";

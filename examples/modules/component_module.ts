@@ -7,8 +7,9 @@
  */
 
 import { IApplicationModule, ApplicationContextBase } from "flagwind-core";
-import { Workbench, ApplicationContext } from "../../src";
-import "../../src/styles/index.less";
+import { Workbench, ApplicationContext } from "src/index";
+import "src/styles/index.less";
+import "examples/styles/index.less";
 
 /**
  * 组件管理模块。

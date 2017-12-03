@@ -11,14 +11,14 @@
 import Vue from "vue";
 import components from "../components";
 import { WorkbenchBase, ApplicationContextBase } from "flagwind-core";
-import { Workspace } from "./workspace";
+import Workspace from "./workspace";
 
 /**
  * 提供工作台的基本封装。
  * @class
  * @version 1.0.0
  */
-export class Workbench extends WorkbenchBase
+export default class Workbench extends WorkbenchBase
 {
     private _workspace: Workspace;
     

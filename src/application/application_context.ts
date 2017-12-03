@@ -11,14 +11,14 @@
 import Vue from "vue";
 import Router from "vue-router";
 import { IWorkbench, ApplicationContextBase, InvalidOperationException } from "flagwind-core";
-import { Workbench } from "./workbench";
+import Workbench from "./workbench";
 
 /**
  * 包含当前应用程序的上下文实例。
  * @class
  * @version 1.0.0
  */
-export class ApplicationContext extends ApplicationContextBase
+export default class ApplicationContext extends ApplicationContextBase
 {
     private _router: Router;
 

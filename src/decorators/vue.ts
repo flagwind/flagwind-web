@@ -8,14 +8,15 @@
  * Copyright (C) 2010-2017 Flagwind Inc. All rights reserved. 
  */
 
-import Component from "vue-class-component";
+import component from "vue-class-component";
+import { Prop as property, Model as model, Watch as watch } from "vue-property-decorator";
 
-Component.registerHooks
+// 注册路由相关钩子函数
+component.registerHooks
 ([
     "beforeRouteEnter",
     "beforeRouteLeave",
     "beforeRouteUpdate"
 ]);
 
-export { Component as component };
-export { Inject as inject, Model as model, Prop as prop, Provide as provide, Watch as watch } from "vue-property-decorator";
+export { component, property, model, watch };

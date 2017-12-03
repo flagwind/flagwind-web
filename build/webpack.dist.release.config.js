@@ -20,13 +20,10 @@ module.exports = merge(webpackBaseConfig,
     },
     externals: 
     {
-        vue: 
-        {
-            root: "Vue",
-            commonjs: "vue",
-            commonjs2: "vue",
-            amd: "vue"
-        }
+        "vue": "vue",
+        "vue-router": "vue-router",
+        "vuex": "vuex",
+        "flagwind-core": "flagwind-core"
     },
     plugins: 
     [
