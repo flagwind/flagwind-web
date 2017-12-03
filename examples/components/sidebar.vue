@@ -42,7 +42,7 @@ export default class Sidebar extends Component
         {
             return this.$route.matched.length && this.$route.matched[0].path === item.path;
         });
-
+        
         return buffer && buffer.length ? buffer[0].children : [];
     }
 

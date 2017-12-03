@@ -1,5 +1,7 @@
 <template>
-    <div>Button</div>
+    <div>
+        颜色...
+    </div>
 </template>
 
 <script lang="ts">
@@ -7,7 +9,7 @@
 import { component, View } from "src/index";
 
 @component
-export default class Button extends View
+export default class Color extends View
 {
     
 }

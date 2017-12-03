@@ -9,16 +9,14 @@
 import GenericLayout from "../layouts/generic.vue";
 import ContentLayout from "../layouts/content.vue";
 
-import Overview from "../views/overview.vue";
+import IntroView from "../views/intro.vue";
+import ColorView from "../views/color.vue";
 
 const routes =
 [
     {
         path: "/",
-        redirect: to =>
-        {
-            return "overview";
-        }
+        redirect: "overview"
     },
     {
         path: "/overview",
@@ -32,7 +30,47 @@ const routes =
         [
             {
                 path: "",
-                component: Overview
+                component: IntroView
+            }
+        ]
+    },
+    {
+        path: "/components",
+        component: ContentLayout,
+        meta:
+        {
+            title: "组件",
+            icon: "ios-keypad"
+        },
+        children:
+        [
+            {
+                path: "",
+                redirect: "generic"
+            },
+            {
+                path: "generic",
+                component: ContentLayout,
+                meta:
+                {
+                    title: "基本"
+                },
+                children:
+                [
+                    {
+                        path: "",
+                        redirect: "color"
+                    },
+                    {
+                        path: "color",
+                        component: ColorView,
+                        meta:
+                        {
+                            title: "颜色",
+                            icon: "icon-android-color-palette"
+                        }
+                    }
+                ]
             }
         ]
     }

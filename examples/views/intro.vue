@@ -1,5 +1,5 @@
 <template>
-    <div class="u-overview">
+    <div class="u-intro">
         <i-alert type="success" show-icon>
             A success prompt
             <span slot="desc">Content of prompt. Content of prompt. Content of prompt. Content of prompt. </span>
@@ -12,7 +12,7 @@
 import { component, View } from "src/index";
 
 @component
-export default class Overview extends View
+export default class IntroView extends View
 {
     
 }

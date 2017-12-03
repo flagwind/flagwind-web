@@ -10,6 +10,7 @@
 
 import Vue from "vue";
 import Router from "vue-router";
+import Vuex, { Store } from "vuex";
 import { IWorkbench, ApplicationContextBase, InvalidOperationException } from "flagwind-core";
 import Workbench from "./workbench";
 
@@ -21,6 +22,7 @@ import Workbench from "./workbench";
 export default class ApplicationContext extends ApplicationContextBase
 {
     private _router: Router;
+    private _store: Store<any>;
 
     /**
      * 获取或设置当前应用的主路由对象。
@@ -29,11 +31,6 @@ export default class ApplicationContext extends ApplicationContextBase
      */
     public get router(): Router
     {
-        if(!this._router)
-        {
-            this._router = this.createRouter();
-        }
-
         return this._router;
     }
     
@@ -47,6 +44,26 @@ export default class ApplicationContext extends ApplicationContextBase
         this._router = value;
     }
 
+    /**
+     * 获取或设置当前应用的状态管理对象。
+     * @property
+     * @returns Store<any>
+     */
+    public get store(): Store<any>
+    {
+        return this._store;
+    }
+    
+    public set store(value: Store<any>)
+    {
+        if(!value)
+        {
+            throw new InvalidOperationException();
+        }
+
+        this._store = value;
+    }
+    
     /**
      * 获取当前应用程序的上下文实例。
      * @static
@@ -64,6 +81,9 @@ export default class ApplicationContext extends ApplicationContextBase
         
         // 注册路由组件
         Vue.use(Router);
+
+        // 注册状态管理组件
+        Vue.use(Vuex);
     }
 
     /**
@@ -74,14 +94,5 @@ export default class ApplicationContext extends ApplicationContextBase
     protected createWorkbench(args: Array<string>): IWorkbench
     {
         return new Workbench(this);
-    }
-
-    /**
-     * 创建一个主路由对象。
-     * @returns Router
-     */
-    protected createRouter(): Router
-    {
-        return new Router();
     }
 }

@@ -6,17 +6,17 @@
  * Copyright (C) 2010-2017 Flagwind Inc. All rights reserved. 
  */
 
+import { Store } from "vuex";
 import { IApplicationModule, ApplicationContextBase } from "flagwind-core";
 import { Workbench, ApplicationContext } from "src/index";
-import "src/styles/index.less";
-import "examples/styles/index.less";
+import route from "../stores/route";
 
 /**
- * 组件管理模块。
+ * 状态管理模块。
  * @class
  * @version 1.0.0
  */
-export class ComponentModule implements IApplicationModule
+export default class StoreModule implements IApplicationModule
 {
     /**
      * 获取应用扩展模块名称。
@@ -24,7 +24,7 @@ export class ComponentModule implements IApplicationModule
      */
     public get name(): string
     {
-        return "Component";
+        return "store";
     }
     
     /**
@@ -34,7 +34,14 @@ export class ComponentModule implements IApplicationModule
      */
     public initialize(context: ApplicationContext): void
     {
-        // todo
+        let store = new Store
+        ({
+            modules: {
+            }
+        });
+
+        // 设置路由程序
+        context.store = store;
     }
 
     /**

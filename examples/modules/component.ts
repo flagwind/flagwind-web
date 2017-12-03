@@ -6,17 +6,21 @@
  * Copyright (C) 2010-2017 Flagwind Inc. All rights reserved. 
  */
 
-import Router from "vue-router";
 import { IApplicationModule, ApplicationContextBase } from "flagwind-core";
 import { Workbench, ApplicationContext } from "src/index";
-import routes from "../routes";
+
+// 注册公共样式
+import "src/styles/index.less";
+
+// 注册项目样式
+import "examples/styles/index.less";
 
 /**
- * 路由管理模块。
+ * 组件管理模块。
  * @class
  * @version 1.0.0
  */
-export class RouteModule implements IApplicationModule
+export default class ComponentModule implements IApplicationModule
 {
     /**
      * 获取应用扩展模块名称。
@@ -24,7 +28,7 @@ export class RouteModule implements IApplicationModule
      */
     public get name(): string
     {
-        return "Route";
+        return "component";
     }
     
     /**
@@ -34,10 +38,7 @@ export class RouteModule implements IApplicationModule
      */
     public initialize(context: ApplicationContext): void
     {
-        let router = new Router({routes});
-
-        // 设置路由程序
-        context.router = router;
+        // todo
     }
 
     /**

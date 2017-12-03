@@ -21,7 +21,7 @@ import { component, Component } from "src/index";
 export default class Header extends Component
 {
     protected activePath: string = "";
-
+    
     /**
      * 创建组件时调用的钩子方法。
      * @protected
