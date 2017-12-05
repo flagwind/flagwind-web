@@ -6,21 +6,17 @@
  * Copyright (C) 2010-2017 Flagwind Inc. All rights reserved. 
  */
 
-import { IApplicationModule, ApplicationContextBase } from "flagwind-core";
-import { Workbench, ApplicationContext } from "src/index";
-
-// 注册公共样式
-import "src/styles/index.less";
-
-// 注册项目样式
-import "examples/styles/index.less";
+import { Store } from "vuex";
+import { IApplicationModule } from "flagwind-core";
+import { ApplicationContext } from "src/index";
+import modules from "../store";
 
 /**
- * 组件管理模块。
+ * 状态管理模块。
  * @class
  * @version 1.0.0
  */
-export default class ComponentModule implements IApplicationModule
+export default class StoreModule implements IApplicationModule
 {
     /**
      * 获取应用扩展模块名称。
@@ -28,7 +24,7 @@ export default class ComponentModule implements IApplicationModule
      */
     public get name(): string
     {
-        return "component";
+        return "store";
     }
     
     /**
@@ -38,9 +34,15 @@ export default class ComponentModule implements IApplicationModule
      */
     public initialize(context: ApplicationContext): void
     {
-        // todo
+        let store = new Store
+        ({
+            modules
+        });
+        
+        // 设置状态管理容器
+        context.store = store;
     }
-
+    
     /**
      * 执行与释放或重置非托管资源关联的应用程序定义的任务。
      * @returns void

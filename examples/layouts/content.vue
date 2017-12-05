@@ -7,7 +7,7 @@
         </i-col>
         <i-col span="20">
             <!--内容开始-->
-            <div class="layout-content">
+            <div class="u-content">
                 <router-view></router-view>
             </div>
             <!--内容结束-->

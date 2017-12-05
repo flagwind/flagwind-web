@@ -1,0 +1,140 @@
+.example
+{
+    position: relative;
+    margin-bottom: 20px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    transition: all .2s ease-in-out;
+}
+
+.example:hover
+{
+    position: relative;
+    border-color: transparent;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, .15);
+}
+
+.example-split
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    display: block;
+    border: 1px dashed #eee;
+}
+
+.example-vertical .example-split
+{
+    position: relative;
+    left: 0;
+    width: 100%;
+    float: left;
+}
+
+.example-demo
+{
+    position: relative;
+    padding: 20px 0;
+}
+
+.example-case
+{
+    padding: 0 20px;
+}
+
+.example-title
+{
+    position: relative;
+    margin: 30px 0 10px;
+    font-weight: 500;
+}
+
+.example-title span
+{
+    display: inline-block;
+    background: #fff;
+    padding: 0 5px 0 18px;
+    position: relative;
+    margin-left: 30px;
+    font-size: 14px;
+}
+
+.example-title span a {
+    opacity: 0;
+    transition: opacity .2s ease-in-out
+}
+
+.example-title:hover span a {
+    opacity: 1
+}
+
+.example-title:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #eee;
+    position: absolute;
+    top: 10px;
+    left: 0
+}
+
+.example-desc {
+    font-size: 12px;
+    padding: 0 20px
+}
+
+.example-desc p {
+    text-align: justify
+}
+
+.example-desc blockquote, .example-desc p, .example-desc ul li {
+    font-size: 12px !important
+}
+
+.example-code
+{
+    padding: 0 10px;
+    position: relative;
+    overflow: hidden;
+    transition: height .2s ease-in-out;
+}
+
+.example-code-more {
+    position: absolute;
+    bottom: 0;
+    left: 4px;
+    right: 4px;
+    text-align: center;
+    cursor: pointer;
+    padding: 5px 0
+}
+
+.example-code-more:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    box-shadow: inset 0 -15px 30px #fff
+}
+
+.example-code-more i {
+    position: relative;
+    top: 5px;
+    z-index: 2
+}
+
+.example-code-more .ivu-btn {
+    padding: 0 0 4px;
+    position: relative;
+    top: 4px;
+    z-index: 2
+}
+
+.example-code-more:hover i {
+    color: #5cb85c
+}

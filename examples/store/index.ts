@@ -6,5 +6,11 @@
  * Copyright (C) 2010-2017 Flagwind Inc. All rights reserved. 
  */
 
-export { RouteModule } from "./route_module";
-export { ComponentModule } from "./component_module";
+import Route from "./route";
+
+const modules =
+{
+    route: new Route()
+};
+
+export default modules;

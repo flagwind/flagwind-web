@@ -9,6 +9,8 @@
  */
 
 import Vue from "vue";
+import IView from "../components/iview/typings";
+import components from "../components";
 
 /**
  * 定义组件的基础功能。
@@ -17,5 +19,12 @@ import Vue from "vue";
  */
 export class Component extends Vue
 {
-    
+    /**
+     * 获取一个全局消息提示框实例。
+     * @returns IView.IMessageInstance
+     */
+    protected get $msgbox(): IView.IMessageInstance
+    {
+        return components.Message;
+    }
 }

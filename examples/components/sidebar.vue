@@ -1,5 +1,5 @@
 <template>
-    <div class="layout-sidebar">
+    <div class="u-sidebar">
         <i-menu ref="sideMenu" theme="light" width="auto" :active-name="$route.path" @on-select="onMenuSelect">
             <template v-for="(route, index) in routes" v-if="route.meta && route.meta.renderable !== false">
                 <template v-if="route.children && route.children.length > 0">
@@ -31,7 +31,7 @@ export default class Sidebar extends Component
 {
     protected get rootPath(): string
     {
-        return this.$route.matched[0].path;
+         return this.$store.getters["route/rootPath"];
     }
     
     protected get routes(): Array<any>
@@ -50,13 +50,13 @@ export default class Sidebar extends Component
     {
         return this.rootPath + "/" + path1.path + "/" + path2.path;
     }
-    
+
     protected onMenuSelect(path: string): void
     {
         if(path !== this.$route.path)
         {
             // 设置根路由
-            this.$store.dispatch("setRoutePath", this.rootPath);
+            this.$store.dispatch("route/setFullPath", path);
             
             // 跳转路由
             this.$router.push(path);

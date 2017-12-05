@@ -14,6 +14,9 @@ import { component, View } from "src/index";
 @component
 export default class IntroView extends View
 {
-    
+    protected mounted(): void
+    {
+        this.$msgbox.error("lalala");
+    }
 }
 </script>

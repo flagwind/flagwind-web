@@ -11,6 +11,7 @@ import ContentLayout from "../layouts/content.vue";
 
 import IntroView from "../views/intro.vue";
 import ColorView from "../views/color.vue";
+import ButtonView from "../views/button.vue";
 
 const routes =
 [
@@ -36,7 +37,7 @@ const routes =
     },
     {
         path: "/components",
-        component: ContentLayout,
+        component: GenericLayout,
         meta:
         {
             title: "组件",
@@ -67,7 +68,16 @@ const routes =
                         meta:
                         {
                             title: "颜色",
-                            icon: "icon-android-color-palette"
+                            icon: "android-color-palette"
+                        }
+                    },
+                    {
+                        path: "button",
+                        component: ButtonView,
+                        meta:
+                        {
+                            title: "按钮",
+                            icon: "social-youtube-outline"
                         }
                     }
                 ]

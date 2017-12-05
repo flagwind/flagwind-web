@@ -39,7 +39,7 @@ export default class RouteModule implements IApplicationModule
         // 设置路由程序
         context.router = router;
     }
-
+    
     /**
      * 执行与释放或重置非托管资源关联的应用程序定义的任务。
      * @returns void
