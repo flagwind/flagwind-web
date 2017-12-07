@@ -8,22 +8,51 @@
 
 const type = `
 <template>
-    <Button>Default</Button>
-    <Button type="primary">Primary</Button>
-    <Button type="ghost">Ghost</Button>
-    <Button type="dashed">Dashed</Button>
-    <Button type="text">Text</Button>
+    <i-button>Default</i-button>
+    <i-button type="primary">Primary</i-button>
+    <i-button type="ghost">Ghost</i-button>
+    <i-button type="dashed">Dashed</i-button>
+    <i-button type="text">Text</i-button>
     <br><br>
-    <Button type="info">Info</Button>
-    <Button type="success">Success</Button>
-    <Button type="warning">Warning</Button>
-    <Button type="error">Error</Button>
+    <i-button type="info">Info</i-button>
+    <i-button type="success">Success</i-button>
+    <i-button type="warning">Warning</i-button>
+    <i-button type="error">Error</i-button>
 </template>
-<script>
-    export default {
-        
-    }
-</script>
 `;
 
-export { type };
+const icon = `
+<template>
+    <i-button type="primary" shape="circle" icon="ios-search"></i-button>
+    <i-button type="primary" icon="ios-search">Search</i-button>
+    <i-button type="primary" shape="circle" icon="ios-search">Search</i-button>
+    <i-button type="primary" shape="circle">Circle</i-button>
+    <br><br>
+    <i-button type="ghost" shape="circle" icon="ios-search"></i-button>
+    <i-button type="ghost" icon="ios-search">Search</i-button>
+    <i-button type="ghost" shape="circle" icon="ios-search">Search</i-button>
+    <i-button type="ghost" shape="circle">Circle</i-button>
+</template>
+`;
+
+const size = `
+<template>
+    <i-button type="primary" size="large">Large</i-button>
+    <i-button type="primary">Default</i-button>
+    <i-button type="primary" size="small">Small</i-button>
+    <br><br>
+    <i-button type="primary" shape="circle" size="large">Large</i-button>
+    <i-button type="primary" shape="circle">Default</i-button>
+    <i-button type="primary" shape="circle" size="small">Small</i-button>
+</template>
+`;
+
+const long = `
+<template>
+    <i-button type="success" long>SUBMIT</i-button>
+    <br><br>
+    <i-button type="error" long>DELETE</i-button>
+</template>
+`;
+
+export { type, icon, size, long };

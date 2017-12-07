@@ -1,0 +1,61 @@
+/*!
+ * Authors:
+ *      jason <jasonsoop@gmail.com>
+ * 
+ * Licensed under the MIT License.
+ * Copyright (C) 2010-2017 Flagwind Inc. All rights reserved. 
+ */
+
+/* ============================== 代码块(Code) =========================== */
+
+.u-code
+{
+    position: relative;
+    font-size: 14px;
+
+    /*
+    * 复制、放大操作。
+    */
+    &-copy,
+    &-scale
+    {
+        position: absolute;
+        top: 5px;
+        right: 0;
+        padding: 2px 5px;
+        border-radius: 0 0 3px 3px;
+        color: #b2b2b2;
+        cursor: pointer;
+
+        &:hover
+        {
+            color: #5c6b77;
+        }
+    }
+
+    &-scale
+    {
+        right: 25px;
+    }
+
+    &-icon-copy-complete
+    {
+        color:#5cb85c;
+    }
+
+    /*
+    * 放大弹出模态框。
+    */
+    &-scale-modal
+    {
+        .ivu-modal-body
+        {
+            background-color: #f7f7f7;
+        }
+
+        pre
+        {
+            font-size: 14px;
+        }
+    }
+}

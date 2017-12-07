@@ -16,6 +16,10 @@ import ButtonView from "../views/button.vue";
 const routes =
 [
     {
+        path: "*",
+        redirect: "/"
+    },
+    {
         path: "/",
         redirect: "overview"
     },

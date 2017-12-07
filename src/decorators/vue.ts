@@ -9,7 +9,7 @@
  */
 
 import component from "vue-class-component";
-import { Prop as property, Model as model, Watch as watch } from "vue-property-decorator";
+import { Prop as config, Model as model, Watch as watch } from "vue-property-decorator";
 
 // 注册路由相关钩子函数
 component.registerHooks
@@ -19,4 +19,4 @@ component.registerHooks
     "beforeRouteUpdate"
 ]);
 
-export { component, property, model, watch };
+export { component, config, model, watch };

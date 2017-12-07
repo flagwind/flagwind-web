@@ -10,7 +10,8 @@ import Vue from "vue";
 import { IApplicationModule, ApplicationContextBase } from "flagwind-core";
 import { Workbench, ApplicationContext } from "src/index";
 
-import Code from "examples/components/code.vue";
+import Code from "examples/components/code";
+import Example from "examples/components/example";
 
 // 注册公共样式
 import "src/styles/index.less";
@@ -42,6 +43,7 @@ export default class ComponentModule implements IApplicationModule
     public initialize(context: ApplicationContext): void
     {
         Vue.component("u-code", Code);
+        Vue.component("u-example", Example);
     }
 
     /**
