@@ -8,7 +8,7 @@
  * Copyright (C) 2010-2017 Flagwind Inc. All rights reserved. 
  */
 
-import ApplicationContext from "./application_context";
+import ApplicationContext from "./application-context";
 import Workbench from "./workbench";
 import Workspace from "./workspace";
 

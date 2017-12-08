@@ -10,7 +10,7 @@
 
 import Vue from "vue";
 import { IWorkbench } from "flagwind-core";
-import ApplicationContext from "./application_context";
+import ApplicationContext from "./application-context";
 
 /**
  * 提供工作空间的常用功能。
@@ -49,7 +49,7 @@ export default class Workspace extends Vue
         
         // 传入配置进行初始化
         super(options);
-        
+                
         // 保存工作台
         this._workbench = workbench;
     }

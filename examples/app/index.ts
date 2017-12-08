@@ -9,5 +9,6 @@
 import ComponentModule from "./component-module";
 import RouteModule from "./route-module";
 import StoreModule from "./store-module";
+import ConfigModule from "./config-module";
 
-export { ComponentModule, RouteModule, StoreModule };
+export { ComponentModule, RouteModule, StoreModule, ConfigModule };

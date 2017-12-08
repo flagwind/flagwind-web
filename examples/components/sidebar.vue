@@ -1,16 +1,19 @@
 <template>
     <div class="u-sidebar">
-        <i-menu ref="sideMenu" theme="light" width="auto" :active-name="$route.path" @on-select="onMenuSelect">
-            <template v-for="(route, index) in routes" v-if="route.meta && route.meta.renderable !== false">
-                <template v-if="route.children && route.children.length > 0">
-                    <i-menu-group :title="route.meta.title">
-                        <i-menu-item v-for="(item, index) in route.children" :name="getPath(route, item)" :key="getPath(route, item)" v-if="item.meta && item.meta.renderable !== false">
+        <i-menu ref="sideMenu" theme="light" width="auto" :active-name="activePath" @on-select="onMenuSelect">
+            <template v-for="(item, index) in menus" v-if="item.visible !== false">
+                <template v-if="item.children && item.children.length > 0">
+                    <i-menu-group v-bind="item.title" :key="item.path">
+                        <i-menu-item v-for="(item, index) in item.children" :name="item.path" :key="getPath(route, item)" v-if="item.meta && item.meta.renderable !== false">
                             <i-icon :type="item.meta.icon" v-if="item.meta.icon"></i-icon> {{item.meta.title}}
                         </i-menu-item>
                     </i-menu-group>
+
                 </template>
                 <template v-else>
-                    <i-menu-item :name="route.path"><i-icon :type="route.meta.icon" v-if="route.meta.icon"></i-icon> {{route.meta.title}}</i-menu-item>
+                    <i-menu-item :name="item.path" :key="item.path">
+                        <i-icon :type="item.icon" v-if="item.icon"></i-icon> {{item.title}}
+                    </i-menu-item>
                 </template>
             </template>
         </i-menu>
@@ -19,6 +22,7 @@
 
 <script lang="ts">
 
+import * as models from "../models";
 import { component, Component } from "src/index";
 
 /**
@@ -29,35 +33,48 @@ import { component, Component } from "src/index";
 @component
 export default class Sidebar extends Component
 {
-    protected get rootPath(): string
+    protected get activePath(): string
     {
-         return this.$store.getters["route/rootPath"];
+        return this.$route.path;
     }
+
+    protected get menus(): Array<models.MenuItem>
+    {
+        let parentPath = this.$route.matched[0].path;
+        let parentItem = this.$store.getters.menu.item(parentPath);
+
+        return parentItem.children;
+    }
+
+    // protected get rootPath(): string
+    // {
+    //      return this.$store.getters["route/rootPath"];
+    // }
     
-    protected get routes(): Array<any>
-    {
-        let routes = (this.$router as any).options.routes;
+    // protected get routes(): Array<any>
+    // {
+    //     let routes = (this.$router as any).options.routes;
 
-        let buffer = routes.filter((item: any, index: any) =>
-        {
-            return this.$route.matched.length && this.$route.matched[0].path === item.path;
-        });
+    //     let buffer = routes.filter((item: any, index: any) =>
+    //     {
+    //         return this.$route.matched.length && this.$route.matched[0].path === item.path;
+    //     });
         
-        return buffer && buffer.length ? buffer[0].children : [];
-    }
+    //     return buffer && buffer.length ? buffer[0].children : [];
+    // }
 
-    protected getPath(path1: any, path2: any): string
-    {
-        return this.rootPath + "/" + path1.path + "/" + path2.path;
-    }
+    // protected getPath(path1: any, path2: any): string
+    // {
+    //     return this.rootPath + "/" + path1.path + "/" + path2.path;
+    // }
 
     protected onMenuSelect(path: string): void
     {
         if(path !== this.$route.path)
         {
             // 设置根路由
-            this.$store.dispatch("route/setFullPath", path);
-            
+            // this.$store.dispatch("route/setFullPath", path);
+
             // 跳转路由
             this.$router.push(path);
         }

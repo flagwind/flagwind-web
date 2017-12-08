@@ -42,7 +42,7 @@
             </template>
             <u-code slot="code" lang="html">{{code.icon}}</u-code>
         </u-example>
-
+        
         <u-example title="按钮尺寸">
             <template slot="case">
                 <i-button type="primary" size="large">Large</i-button>

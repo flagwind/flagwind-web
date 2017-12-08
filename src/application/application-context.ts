@@ -81,7 +81,7 @@ export default class ApplicationContext extends ApplicationContextBase
         
         // 注册路由组件
         Vue.use(Router);
-
+        
         // 注册状态管理组件
         Vue.use(Vuex);
     }

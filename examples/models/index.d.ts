@@ -6,13 +6,7 @@
  * Copyright (C) 2010-2017 Flagwind Inc. All rights reserved. 
  */
 
-import Route from "./route";
-import Menu from "./menu";
+import MenuItem from "./menu-item";
 
-const modules =
-{
-    route: new Route(),
-    menu: new Menu()
-};
+export { MenuItem };
 
-export default modules;

@@ -21,10 +21,10 @@ const routes =
     },
     {
         path: "/",
-        redirect: "overview"
+        redirect: "intro"
     },
     {
-        path: "/overview",
+        path: "/intro",
         component: GenericLayout,
         meta:
         {
