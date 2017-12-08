@@ -25,7 +25,7 @@ export default interface MenuItem
      * @property
      * @returns string
      */
-    path: string;
+    path?: string;
     
     /**
      * 获取或设置图标样式。
@@ -33,6 +33,13 @@ export default interface MenuItem
      * @returns string
      */
     icon?: string;
+    
+    /**
+     * 获取或设置菜单是否可见。
+     * @property
+     * @returns boolean
+     */
+    visible?: boolean;
 
     /**
      * 获取或设置子菜单。

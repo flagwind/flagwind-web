@@ -6,87 +6,27 @@
  * Copyright (C) 2010-2017 Flagwind Inc. All rights reserved. 
  */
 
-import GenericLayout from "../layouts/generic.vue";
-import ContentLayout from "../layouts/content.vue";
-
-import IntroView from "../views/intro.vue";
-import ColorView from "../views/color.vue";
-import ButtonView from "../views/button.vue";
-
 const routes =
 [
     {
-        path: "*",
-        redirect: "/"
-    },
-    {
         path: "/",
-        redirect: "intro"
+        redirect: "/intro"
     },
     {
         path: "/intro",
-        component: GenericLayout,
-        meta:
-        {
-            title: "概览",
-            icon: "pie-graph"
-        },
-        children:
-        [
-            {
-                path: "",
-                component: IntroView
-            }
-        ]
+        component: (resolve: any) => (<any>require)(["views/intro.vue"], resolve)
     },
     {
         path: "/components",
-        component: GenericLayout,
-        meta:
-        {
-            title: "组件",
-            icon: "ios-keypad"
-        },
-        children:
-        [
-            {
-                path: "",
-                redirect: "generic"
-            },
-            {
-                path: "generic",
-                component: ContentLayout,
-                meta:
-                {
-                    title: "基本"
-                },
-                children:
-                [
-                    {
-                        path: "",
-                        redirect: "color"
-                    },
-                    {
-                        path: "color",
-                        component: ColorView,
-                        meta:
-                        {
-                            title: "颜色",
-                            icon: "android-color-palette"
-                        }
-                    },
-                    {
-                        path: "button",
-                        component: ButtonView,
-                        meta:
-                        {
-                            title: "按钮",
-                            icon: "social-youtube-outline"
-                        }
-                    }
-                ]
-            }
-        ]
+        redirect: "/components/color"
+    },
+    {
+        path: "/components/color",
+        component: (resolve: any) => (<any>require)(["views/components/color.vue"], resolve)
+    },
+    {
+        path: "/components/button",
+        component: (resolve: any) => (<any>require)(["views/components/button.vue"], resolve)
     }
 ];
 

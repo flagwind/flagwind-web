@@ -1,9 +1,8 @@
 <template>
-    <article>
+    <l-article>
         <h1>button 按钮</h1>
         <p>基础组件，触发业务逻辑时使用。</p>
         <h2>代码示例</h2>
-        
         <u-example title="按钮类型">
             <template slot="case">
                 <i-button>Default</i-button>
@@ -23,7 +22,7 @@
             </template>
             <u-code slot="code" lang="html">{{code.type}}</u-code>
         </u-example>
-
+        
         <u-example title="图标按钮及按钮形状">
             <template slot="case">
                 <i-button type="primary" shape="circle" icon="ios-search"></i-button>
@@ -72,18 +71,30 @@
             </template>
             <u-code slot="code" lang="html">{{code.long}}</u-code>
         </u-example>
-
-    </article>
+    </l-article>
 </template>
 
 <script lang="ts">
-
 import { component, View } from "src/index";
-import * as code from "../codes/button";
+import * as code from "examples/codes/button";
 
 @component
 export default class Button extends View
 {
     protected code: any = code;
+
+    protected onClick(): void
+    {
+        let menus =
+        [
+            {
+                title: "实践",
+                icon: "ios-settings-strong",
+                path: "/case"
+            }
+        ];
+        
+        this.$store.dispatch("menu/add", { path: "/", items: menus });
+    }
 }
 </script>

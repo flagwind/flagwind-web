@@ -6,12 +6,10 @@
  * Copyright (C) 2010-2017 Flagwind Inc. All rights reserved. 
  */
 
-import Route from "./route";
 import Menu from "./menu";
 
 const modules =
 {
-    route: new Route(),
     menu: new Menu()
 };
 

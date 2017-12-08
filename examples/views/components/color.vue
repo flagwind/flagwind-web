@@ -1,11 +1,12 @@
 <template>
-    <div>
-        颜色...
-    </div>
+    <l-article>
+        <article class="view-color">
+            color...
+        </article>
+    </l-article>
 </template>
 
 <script lang="ts">
-
 import { component, View } from "src/index";
 
 @component

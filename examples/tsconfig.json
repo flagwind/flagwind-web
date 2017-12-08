@@ -18,7 +18,8 @@
         "baseUrl": ".",
         "paths": {
             "src/*": ["../src/*"],
-            "examples/*": ["./*"]
+            "examples/*": ["./*"],
+            "views/*": ["./views/*"]
         },
         "lib": 
         [

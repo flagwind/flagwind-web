@@ -21,7 +21,6 @@ const menus =
         [
             {
                 title: "基本",
-                path: "/components/generic",
                 children:
                 [
                     {

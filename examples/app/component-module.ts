@@ -13,6 +13,9 @@ import { Workbench, ApplicationContext } from "src/index";
 import Code from "examples/components/code";
 import Example from "examples/components/example";
 
+import Generic from "examples/layouts/generic.vue";
+import Article from "examples/layouts/article.vue";
+
 // 注册公共样式
 import "src/styles/index.less";
 
@@ -42,8 +45,13 @@ export default class ComponentModule implements IApplicationModule
      */
     public initialize(context: ApplicationContext): void
     {
+        // 注册公共组件
         Vue.component("u-code", Code);
         Vue.component("u-example", Example);
+        
+        // 注册布局母版
+        Vue.component("l-generic", Generic);
+        Vue.component("l-article", Article);
     }
 
     /**

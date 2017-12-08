@@ -21,7 +21,8 @@ module.exports = webpackMerge(webpackBaseConfig,
     {
         alias:
         {
-            "examples": resolve("examples")
+            "examples": resolve("examples"),
+            "views": resolve("examples/views")
         }
     },
     output: 

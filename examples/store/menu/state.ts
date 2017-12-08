@@ -35,7 +35,7 @@ export default class State
         
         for(let item of items)
         {
-            if(item.path.toLocaleLowerCase() === path.toLocaleLowerCase())
+            if(item.path && item.path.toLocaleLowerCase() === path.toLocaleLowerCase())
             {
                 result = item;
 

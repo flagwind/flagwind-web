@@ -37,8 +37,7 @@
         "vue": "^2.5.7",
         "vue-property-decorator": "^6.0.0",
         "vue-router": "^3.0.1",
-        "vuex": "^3.0.1",
-        "vuex-class": "^0.3.0"
+        "vuex": "^3.0.1"
     },
     "devDependencies": {
         "@types/chai": "^4.0.4",

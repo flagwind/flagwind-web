@@ -1,14 +1,13 @@
 <template>
-    <div class="u-sidebar">
-        <i-menu ref="sideMenu" theme="light" width="auto" :active-name="activePath" @on-select="onMenuSelect">
-            <template v-for="(item, index) in menus" v-if="item.visible !== false">
+    <div class="layout-sidebar">
+        <i-menu theme="light" width="auto" :active-name="activePath" @on-select="onMenuSelect">
+            <template v-for="(item, index) in menus" v-if="!item.visible">
                 <template v-if="item.children && item.children.length > 0">
-                    <i-menu-group v-bind="item.title" :key="item.path">
-                        <i-menu-item v-for="(item, index) in item.children" :name="item.path" :key="getPath(route, item)" v-if="item.meta && item.meta.renderable !== false">
-                            <i-icon :type="item.meta.icon" v-if="item.meta.icon"></i-icon> {{item.meta.title}}
+                    <i-menu-group :key="item.path" :title="item.title" >
+                        <i-menu-item v-for="(child, index) in item.children" :name="child.path" :key="child.path" v-if="!child.visible">
+                            <i-icon :type="child.icon" v-if="child.icon"></i-icon> {{child.title}}
                         </i-menu-item>
                     </i-menu-group>
-
                 </template>
                 <template v-else>
                     <i-menu-item :name="item.path" :key="item.path">
@@ -21,7 +20,6 @@
 </template>
 
 <script lang="ts">
-
 import * as models from "../models";
 import { component, Component } from "src/index";
 
@@ -33,48 +31,41 @@ import { component, Component } from "src/index";
 @component
 export default class Sidebar extends Component
 {
+    /**
+     * 获取当前需要高亮的菜单路径。
+     * @protected
+     * @property
+     * @returns string
+     */
     protected get activePath(): string
     {
         return this.$route.path;
     }
-
+    
+    /**
+     * 获取需要展示的菜单列表。
+     * @protected
+     * @property
+     * @returns Array<models.MenuItem>
+     */
     protected get menus(): Array<models.MenuItem>
     {
-        let parentPath = this.$route.matched[0].path;
-        let parentItem = this.$store.getters.menu.item(parentPath);
-
+        let path: string = this.$route.path;
+        let parentPath = path.substring(0, path.lastIndexOf("/"));
+        let parentItem = this.$store.getters["menu/item"](parentPath);
+        
         return parentItem.children;
     }
-
-    // protected get rootPath(): string
-    // {
-    //      return this.$store.getters["route/rootPath"];
-    // }
     
-    // protected get routes(): Array<any>
-    // {
-    //     let routes = (this.$router as any).options.routes;
-
-    //     let buffer = routes.filter((item: any, index: any) =>
-    //     {
-    //         return this.$route.matched.length && this.$route.matched[0].path === item.path;
-    //     });
-        
-    //     return buffer && buffer.length ? buffer[0].children : [];
-    // }
-
-    // protected getPath(path1: any, path2: any): string
-    // {
-    //     return this.rootPath + "/" + path1.path + "/" + path2.path;
-    // }
-
+    /**
+     * 当选择菜单项时调用。
+     * @protected
+     * @param  {string} path 菜单路径。
+     */
     protected onMenuSelect(path: string): void
     {
         if(path !== this.$route.path)
         {
-            // 设置根路由
-            // this.$store.dispatch("route/setFullPath", path);
-
             // 跳转路由
             this.$router.push(path);
         }
