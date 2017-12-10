@@ -4,9 +4,9 @@
 // Definitions: https://github.com/yangdan8/iview.git
 import Vue from "vue";
 
-export default Modal;
+export default ModalInstance;
 
-export interface Modal {
+export interface Modal extends Vue{
   /**
    * 对话框是否显示，可使用 v-model 双向绑定数据。
    * @default false
@@ -144,7 +144,7 @@ export interface ModalConfig {
   /**
    * 自定义内容，使用后不再限制类型， content 也无效。
    */
-  render: () => void;
+  render?: () => void;
   /**
    * 宽度，单位 p，默认值416
    */
@@ -176,11 +176,11 @@ export interface ModalConfig {
   onCancel?: () => void;
 }
 
-declare module "vue/types/vue" {
-  interface Vue {
-    /**
-     * 对话框
-     */
-    $Modal: ModalInstance;
-  }
-}
+// declare module "vue/types/vue" {
+//   interface Vue {
+//     /**
+//      * 对话框
+//      */
+//     $Modal: ModalInstance;
+//   }
+// }

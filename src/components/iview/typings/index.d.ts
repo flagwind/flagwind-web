@@ -40,7 +40,7 @@ import { Radio, RadioGroup } from "./radio";
 import { Rate } from "./rate";
 import { Scroll } from "./scroll";
 import { Select, SelectOption, SelectOptionGroup } from "./select";
-import { Spin } from "./spin";
+import { Spin, SpinInstance, SpinConfig } from "./spin";
 import { Steps, Step } from "./steps";
 import { Switch } from "./switch";
 import { Table, TableColumn, TableRenderCreateElementData, TableRenderCreateElementResult, TableColumnRenderParams, TableExportCsvParams } from "./table";
@@ -108,6 +108,8 @@ export declare module IView {
   interface ISelectOption extends SelectOption { }
   interface ISelectOptionGroup extends SelectOptionGroup { }
   interface ISpin extends Spin { }
+  interface ISpinConfig extends SpinConfig { }
+  interface ISpinInstance extends SpinInstance { }
   interface IStep extends Step { }
   interface ISteps extends Steps { }
   interface ISubmenu extends Submenu { }

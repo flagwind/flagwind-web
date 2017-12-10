@@ -66,14 +66,14 @@ export interface MessageConfig {
   duration?: number;
 }
 
-declare module "vue/types/vue" {
-  interface Vue {
-    /**
-     * 全局提示
-     */
-    $Message: MessageInstance;
-  }
-}
+// declare module "vue/types/vue" {
+//   interface Vue {
+//     /**
+//      * 全局提示
+//      */
+//     $Message: MessageInstance;
+//   }
+// }
 
 
 

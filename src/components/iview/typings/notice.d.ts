@@ -80,11 +80,11 @@ export interface NoticeGlobalConfig {
   duration: number;
 }
 
-declare module "vue/types/vue" {
-  interface Vue {
-    /**
-     * 通知提醒
-     */
-    $Notice: NoticeInstance;
-  }
-}
+// declare module "vue/types/vue" {
+//   interface Vue {
+//     /**
+//      * 通知提醒
+//      */
+//     $Notice: NoticeInstance;
+//   }
+// }

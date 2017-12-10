@@ -53,11 +53,11 @@ export interface LoadingBarConfig {
   height?: number;
 }
 
-declare module "vue/types/vue" {
-  interface Vue {
-    /**
-     * 加载进度条
-     */
-    $Loading: LoadingBarInstance;
-  }
-}
+// declare module "vue/types/vue" {
+//   interface Vue {
+//     /**
+//      * 加载进度条
+//      */
+//     $Loading: LoadingBarInstance;
+//   }
+// }

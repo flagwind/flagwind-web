@@ -20,11 +20,47 @@ import components from "../components";
 export class Component extends Vue
 {
     /**
+     * 获取一个全局加载条实例。
+     * @returns IView.ILoadingBarInstance
+     */
+    protected get $loading(): IView.ILoadingBarInstance
+    {
+        return components.LoadingBar;
+    }
+    
+    /**
      * 获取一个全局消息提示框实例。
      * @returns IView.IMessageInstance
      */
-    protected get $msgbox(): IView.IMessageInstance
+    protected get $message(): IView.IMessageInstance
     {
         return components.Message;
+    }
+    
+    /**
+     * 获取一个全局模态框实例。
+     * @returns IView.IModalInstance
+     */
+    protected get $modal(): IView.IModalInstance
+    {
+        return components.Modal;
+    }
+    
+    /**
+     * 获取一个全局通知提醒实例。
+     * @returns IView.INoticeInstance
+     */
+    protected get $notice(): IView.INoticeInstance
+    {
+        return components.Notice;
+    }
+    
+    /**
+     * 获取一个全局加载中组件实例。
+     * @returns IView.ISpin
+     */
+    protected get $spin(): IView.ISpinInstance
+    {
+        return components.Spin;
     }
 }

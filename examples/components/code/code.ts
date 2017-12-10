@@ -129,7 +129,7 @@ export default class Code extends Component
             
             this.isCopy = true;
             
-            this.$msgbox.success("代码已复制到剪贴板");
+            this.$message.success("代码已复制到剪贴板");
             
             setTimeout(() => { this.isCopy = false; }, 2000);
         });

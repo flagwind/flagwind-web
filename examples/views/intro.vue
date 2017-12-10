@@ -17,7 +17,7 @@ export default class Intro extends View
 {
     protected mounted(): void
     {
-        this.$msgbox.error("lalala");
+        // todo
     }
 }
 </script>

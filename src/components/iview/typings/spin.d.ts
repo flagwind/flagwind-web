@@ -4,7 +4,7 @@
 // Definitions: https://github.com/yangdan8/iview.git
 import Vue from "vue";
 
-export default Spin;
+export default SpinInstance;
 
 export interface Spin extends Vue {
   /**
@@ -25,4 +25,28 @@ export interface Spin extends Vue {
      */
     '': Vue
   };
+}
+
+export interface SpinConfig {
+  /**
+   * Spin尺寸，可选值为large和small或者不设置
+   */
+  size?: 'large' | 'small';
+  /**
+   * 是否固定，需要父级有relative或absolute
+   * @default false
+   */
+  fix?: boolean;
+}
+
+export interface SpinInstance {
+  /**
+   * 显示。
+   * @param options 配置对象
+   */
+  show(options: SpinConfig): void;
+  /**
+   * 隐藏
+   */
+  hide(): void;
 }
