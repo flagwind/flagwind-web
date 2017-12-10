@@ -7,7 +7,9 @@
  */
 
 import Router from "vue-router";
-import { IApplicationModule, ApplicationContextBase } from "flagwind-core";
+import flagwind from "flagwind-core";
+import IApplicationModule = flagwind.IApplicationModule;
+import ApplicationContextBase = flagwind.ApplicationContextBase;
 import { Workbench, ApplicationContext } from "src/index";
 import routes from "../routes";
 

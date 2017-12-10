@@ -9,8 +9,10 @@
  */
 
 import Vue from "vue";
+import flagwind from "flagwind-core";
+import WorkbenchBase = flagwind.WorkbenchBase;
+import ApplicationContextBase = flagwind.ApplicationContextBase;
 import components from "../components";
-import { WorkbenchBase, ApplicationContextBase } from "flagwind-core";
 import Workspace from "./workspace";
 
 /**

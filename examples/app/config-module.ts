@@ -6,7 +6,9 @@
  * Copyright (C) 2010-2017 Flagwind Inc. All rights reserved. 
  */
 
-import { IApplicationModule, ApplicationContextBase } from "flagwind-core";
+import flagwind from "flagwind-core";
+import IApplicationModule = flagwind.IApplicationModule;
+import ApplicationContextBase = flagwind.ApplicationContextBase;
 import { Workbench, ApplicationContext } from "src/index";
 import menus from "../config/menus";
 

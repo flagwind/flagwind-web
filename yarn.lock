@@ -2542,8 +2542,8 @@ flagged-respawn@^0.3.2:
   resolved "http://registry.npm.taobao.org/flagged-respawn/download/flagged-respawn-0.3.2.tgz#ff191eddcd7088a675b2610fffc976be9b8074b5"
 
 flagwind-core@^1.0.1:
-  version "1.0.1"
-  resolved "http://registry.npm.taobao.org/flagwind-core/download/flagwind-core-1.0.1.tgz#d1538583b439e67615f35da6ff4a3338f26fad96"
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/flagwind-core/-/flagwind-core-1.0.2.tgz#d6095e77538f2c7363659def169cf7168f87cc66"
 
 flatten@^1.0.2:
   version "1.0.2"

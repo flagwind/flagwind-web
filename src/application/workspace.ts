@@ -9,7 +9,8 @@
  */
 
 import Vue from "vue";
-import { IWorkbench } from "flagwind-core";
+import flagwind from "flagwind-core";
+import IWorkbench = flagwind.IWorkbench;
 import ApplicationContext from "./application-context";
 
 /**

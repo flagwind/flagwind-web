@@ -7,7 +7,9 @@
  */
 
 import * as models from "../../models";
-import { InvalidOperationException, Type } from "flagwind-core";
+import flagwind from "flagwind-core";
+import Type = flagwind.Type;
+import InvalidOperationException = flagwind.InvalidOperationException;
 
 export default class State
 {

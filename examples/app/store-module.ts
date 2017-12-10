@@ -7,7 +7,8 @@
  */
 
 import { Store } from "vuex";
-import { IApplicationModule } from "flagwind-core";
+import flagwind from "flagwind-core";
+import IApplicationModule = flagwind.IApplicationModule;
 import { ApplicationContext } from "src/index";
 import modules from "../store";
 

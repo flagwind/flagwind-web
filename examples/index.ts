@@ -6,7 +6,7 @@
  * Copyright (C) 2010-2017 Flagwind Inc. All rights reserved. 
  */
 
-import { Application } from "flagwind-core";
+import flagwind from "flagwind-core";
 import { ApplicationContext } from "src/index";
 import { ComponentModule, RouteModule, StoreModule, ConfigModule } from "./app";
 
@@ -26,4 +26,4 @@ context.modules.add(new StoreModule());
 context.modules.add(new ConfigModule());
 
 // 启动应用程序
-Application.start(context);
+flagwind.Application.start(context);

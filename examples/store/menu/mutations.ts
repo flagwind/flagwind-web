@@ -7,7 +7,10 @@
  */
 
 import { Mutation, MutationTree } from "vuex";
-import { ArgumentException, Type, InvalidOperationException } from "flagwind-core";
+import flagwind from "flagwind-core";
+import Type = flagwind.Type;
+import ArgumentException = flagwind.ArgumentException;
+import InvalidOperationException = flagwind.InvalidOperationException;
 import * as models from "../../models";
 import State from "./state";
 

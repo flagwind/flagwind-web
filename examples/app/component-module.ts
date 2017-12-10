@@ -7,7 +7,9 @@
  */
 
 import Vue from "vue";
-import { IApplicationModule, ApplicationContextBase } from "flagwind-core";
+import flagwind from "flagwind-core";
+import IApplicationModule = flagwind.IApplicationModule;
+import ApplicationContextBase = flagwind.ApplicationContextBase;
 import { Workbench, ApplicationContext } from "src/index";
 
 import Code from "examples/components/code";
