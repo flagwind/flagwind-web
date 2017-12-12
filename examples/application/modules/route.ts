@@ -9,9 +9,8 @@
 import Router from "vue-router";
 import flagwind from "flagwind-core";
 import IApplicationModule = flagwind.IApplicationModule;
-import ApplicationContextBase = flagwind.ApplicationContextBase;
-import { Workbench, ApplicationContext } from "src/index";
-import routes from "../routes";
+import ApplicationContext from "../context";
+import routes from "../../routes";
 
 /**
  * 路由管理模块。

@@ -1,6 +1,4 @@
 /*!
- * This file is part of `application` module. 
- * 
  * Authors:
  *      jason <jasonsoop@gmail.com>
  * 
@@ -11,10 +9,13 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Vuex, { Store } from "vuex";
+
 import flagwind from "flagwind-core";
 import IWorkbench = flagwind.IWorkbench;
 import ApplicationContextBase = flagwind.ApplicationContextBase;
 import InvalidOperationException = flagwind.InvalidOperationException;
+
+import modules from "./modules";
 import Workbench from "./workbench";
 
 /**
@@ -87,6 +88,9 @@ export default class ApplicationContext extends ApplicationContextBase
         
         // 注册状态管理组件
         Vue.use(Vuex);
+        
+        // 注册应用程序模块
+        this.modules.add(...modules);
     }
 
     /**

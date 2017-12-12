@@ -8,9 +8,8 @@
 
 import flagwind from "flagwind-core";
 import IApplicationModule = flagwind.IApplicationModule;
-import ApplicationContextBase = flagwind.ApplicationContextBase;
-import { Workbench, ApplicationContext } from "src/index";
-import menus from "../config/menus";
+import ApplicationContext from "../context";
+import menus from "../../config/menus";
 
 /**
  * 组件管理模块。
@@ -38,7 +37,7 @@ export default class ConfigModule implements IApplicationModule
         // 初始化菜单
         this.initMenu(context);
     }
-
+    
     /**
      * 执行与释放或重置非托管资源关联的应用程序定义的任务。
      * @returns void

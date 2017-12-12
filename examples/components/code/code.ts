@@ -8,7 +8,8 @@
 
 import * as hljs from "highlight.js";
 import Clipboard from "clipboard";
-import { component, config, Component } from "src/index";
+import { component, config } from "../../decorators";
+import { Component } from "src/index";
 
 /**
  * 表示一个呈现代码块的组件。

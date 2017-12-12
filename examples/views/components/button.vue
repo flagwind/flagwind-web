@@ -330,7 +330,8 @@
 </template>
 
 <script lang="ts">
-import { component, View } from "src/index";
+import { component } from "../../decorators";
+import { View } from "src/index";
 import * as code from "examples/codes/button";
 
 @component

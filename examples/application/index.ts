@@ -1,6 +1,4 @@
 /*!
- * This file is part of `application` module. 
- * 
  * Authors:
  *      jason <jasonsoop@gmail.com>
  * 
@@ -8,8 +6,13 @@
  * Copyright (C) 2010-2017 Flagwind Inc. All rights reserved. 
  */
 
-import ApplicationContext from "./application-context";
+import ApplicationContext from "./context";
 import Workbench from "./workbench";
 import Workspace from "./workspace";
 
-export { ApplicationContext, Workbench, Workspace };
+export
+{
+    ApplicationContext,
+    Workbench,
+    Workspace
+};

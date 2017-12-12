@@ -9,7 +9,8 @@
 </template>
 
 <script lang="ts">
-import { component, Component } from "src/index";
+import { component } from "../decorators";
+import { Component } from "src/index";
 import Header from "examples/components/header.vue";
 
 /**

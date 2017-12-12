@@ -6,18 +6,28 @@
  * Copyright (C) 2010-2017 Flagwind Inc. All rights reserved. 
  */
 
-import { Store } from "vuex";
+import Vue from "vue";
 import flagwind from "flagwind-core";
 import IApplicationModule = flagwind.IApplicationModule;
-import { ApplicationContext } from "src/index";
-import modules from "../store";
+import ApplicationContext from "../context";
+
+import Code from "examples/components/code";
+import Example from "examples/components/example";
+import Generic from "examples/layouts/generic.vue";
+import Article from "examples/layouts/article.vue";
+
+// 注册公共样式
+import "src/styles/index.less";
+
+// 注册项目样式
+import "examples/styles/index.less";
 
 /**
- * 状态管理模块。
+ * 组件管理模块。
  * @class
  * @version 1.0.0
  */
-export default class StoreModule implements IApplicationModule
+export default class ComponentModule implements IApplicationModule
 {
     /**
      * 获取应用扩展模块名称。
@@ -25,7 +35,7 @@ export default class StoreModule implements IApplicationModule
      */
     public get name(): string
     {
-        return "store";
+        return "component";
     }
     
     /**
@@ -35,13 +45,13 @@ export default class StoreModule implements IApplicationModule
      */
     public initialize(context: ApplicationContext): void
     {
-        let store = new Store
-        ({
-            modules
-        });
+        // 注册公共组件
+        Vue.component("u-code", Code);
+        Vue.component("u-example", Example);
         
-        // 设置状态管理容器
-        context.store = store;
+        // 注册布局母版
+        Vue.component("l-generic", Generic);
+        Vue.component("l-article", Article);
     }
     
     /**

@@ -1,6 +1,4 @@
 /*!
- * This file is part of `application` module. 
- * 
  * Authors:
  *      jason <jasonsoop@gmail.com>
  * 
@@ -12,7 +10,7 @@ import Vue from "vue";
 import flagwind from "flagwind-core";
 import WorkbenchBase = flagwind.WorkbenchBase;
 import ApplicationContextBase = flagwind.ApplicationContextBase;
-import components from "../components";
+import components from "src/components";
 import Workspace from "./workspace";
 
 /**

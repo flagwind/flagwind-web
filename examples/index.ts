@@ -7,23 +7,10 @@
  */
 
 import flagwind from "flagwind-core";
-import { ApplicationContext } from "src/index";
-import { ComponentModule, RouteModule, StoreModule, ConfigModule } from "./app";
+import ApplicationContext from "./application/context";
 
 // 获取应用上下文
 let context = ApplicationContext.current;
-
-// 注册全局组件模块
-context.modules.add(new ComponentModule());
-
-// 注册全局路由模块
-context.modules.add(new RouteModule());
-
-// 注册全局状态模块
-context.modules.add(new StoreModule());
-
-// 注册全局配置模块
-context.modules.add(new ConfigModule());
 
 // 启动应用程序
 flagwind.Application.start(context);

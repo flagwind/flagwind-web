@@ -1,6 +1,4 @@
 /*!
- * This file is part of `application` module. 
- * 
  * Authors:
  *      jason <jasonsoop@gmail.com>
  * 
@@ -11,7 +9,7 @@
 import Vue from "vue";
 import flagwind from "flagwind-core";
 import IWorkbench = flagwind.IWorkbench;
-import ApplicationContext from "./application-context";
+import ApplicationContext from "./context";
 
 /**
  * 提供工作空间的常用功能。

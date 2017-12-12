@@ -6,7 +6,8 @@
  * Copyright (C) 2010-2017 Flagwind Inc. All rights reserved. 
  */
 
-import { component, config, Component } from "src/index";
+import { component, config } from "../../decorators";
+import { Component } from "src/index";
 
 /**
  * 表示一个示范组件。

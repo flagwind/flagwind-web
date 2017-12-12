@@ -8,7 +8,7 @@
  * Copyright (C) 2010-2017 Flagwind Inc. All rights reserved. 
  */
 
-import iview, { install as installIView } from "./iview";
+import iview, { install as iviewInstall } from "./iview";
 
 const components =
 {
@@ -18,7 +18,7 @@ const components =
 // tslint:disable-next-line:variable-name
 const install = function(Vue: any, opts: any = {})
 {
-    installIView(Vue, opts);
+    iviewInstall(Vue, opts);
 };
 
 export default { ...components, install };

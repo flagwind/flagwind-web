@@ -21,7 +21,8 @@
 
 <script lang="ts">
 import * as models from "../models";
-import { component, Component } from "src/index";
+import { component } from "../decorators";
+import { Component } from "src/index";
 
 /**
  * 表示一个公共头部组件。

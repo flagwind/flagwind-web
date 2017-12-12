@@ -10,7 +10,8 @@
 </template>
 
 <script lang="ts">
-import { component, View } from "src/index";
+import { component } from "../decorators";
+import { View } from "src/index";
 
 @component
 export default class Intro extends View
