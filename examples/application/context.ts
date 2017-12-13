@@ -15,7 +15,6 @@ import IWorkbench = flagwind.IWorkbench;
 import ApplicationContextBase = flagwind.ApplicationContextBase;
 import InvalidOperationException = flagwind.InvalidOperationException;
 
-import modules from "./modules";
 import Workbench from "./workbench";
 
 /**
@@ -47,7 +46,7 @@ export default class ApplicationContext extends ApplicationContextBase
 
         this._router = value;
     }
-
+    
     /**
      * 获取或设置当前应用的状态管理对象。
      * @property
@@ -82,15 +81,6 @@ export default class ApplicationContext extends ApplicationContextBase
     protected constructor()
     {
         super("flagwind-web");
-        
-        // 注册路由组件
-        Vue.use(Router);
-        
-        // 注册状态管理组件
-        Vue.use(Vuex);
-        
-        // 注册应用程序模块
-        this.modules.add(...modules);
     }
 
     /**

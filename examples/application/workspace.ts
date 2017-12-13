@@ -7,6 +7,7 @@
  */
 
 import Vue from "vue";
+
 import flagwind from "flagwind-core";
 import IWorkbench = flagwind.IWorkbench;
 import ApplicationContext from "./context";
