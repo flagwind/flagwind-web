@@ -10,7 +10,7 @@ import { component, config } from "../../decorators";
 import { Component } from "src/index";
 
 /**
- * 表示一个示范组件。
+ * 表示一个组件示范组件。
  * @class
  * @version 1.0.0
  */

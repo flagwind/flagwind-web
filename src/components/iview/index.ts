@@ -91,4 +91,6 @@ export function install(Vue: any, opts: any = {})
     });
 }
 
+export { default as IView } from "./typings";
+
 export default components;

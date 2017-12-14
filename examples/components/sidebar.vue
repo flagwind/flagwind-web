@@ -25,7 +25,7 @@ import { component } from "../decorators";
 import { Component } from "src/index";
 
 /**
- * 表示一个公共头部组件。
+ * 表示一个公共侧边栏组件。
  * @class
  * @version 1.0.0
  */

@@ -5,19 +5,20 @@
     "author": "jason <jasonsoop@gmail.com>",
     "scripts": {
         "dev": "webpack-dev-server --content-base test/ --open --inline --hot --compress --history-api-fallback --port 8010 --config build/webpack.dev.config.js",
+        "dist:clean": "node build/build.clean.js",
         "dist:style": "gulp --gulpfile build/gulp.build.style.js",
+        "dist:typing": "node build/build.typing.js",
         "dist:debug": "webpack --config build/webpack.dist.debug.config.js",
         "dist:release": "webpack --config build/webpack.dist.release.config.js",
-        "dist": "npm run dist:style && npm run dist:debug && npm run dist:release",
+        "dist": "npm run dist:clean && npm run dist:style && npm run dist:debug && npm run dist:release && npm run dist:typing",
         "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
         "test": "npm run unit"
     },
     "files": [
-        "src",
         "dist"
     ],
     "main": "dist/flagwind-web.js",
-    "typings": "dist/typings/flagwind-web.d.ts",
+    "typings": "dist/typings/index.d.ts",
     "keywords": [
         "flagwind",
         "typescript"
@@ -32,12 +33,10 @@
         "url": "https://github.com/flagwind/flagwind-web/issues"
     },
     "dependencies": {
-        "flagwind-core": "^1.0.3",
-        "iview": "^2.7.3",
-        "vue": "^2.5.7",
-        "vue-property-decorator": "^6.0.0",
-        "vue-router": "^3.0.1",
-        "vuex": "^3.0.1"
+        "iview": "^2.7.3"
+    },
+    "peerDependencies": {
+        "vue": "^2.5.7"
     },
     "devDependencies": {
         "@types/chai": "^4.0.4",
@@ -58,10 +57,13 @@
         "clipboard": "^1.7.1",
         "cross-env": "^5.0.1",
         "css-loader": "^0.28.7",
+        "del": "^3.0.0",
         "es6-promise": "^4.1.1",
         "eventsource-polyfill": "^0.9.6",
         "file-loader": "^1.1.5",
+        "flagwind-core": "^1.0.3",
         "friendly-errors-webpack-plugin": "^1.6.1",
+        "fs-extra": "^5.0.0",
         "gulp": "^3.9.1",
         "gulp-autoprefixer": "^4.0.0",
         "gulp-clean-css": "^3.9.0",
@@ -95,11 +97,15 @@
         "tslint-loader": "^3.5.3",
         "typescript": "^2.6.1",
         "url-loader": "^0.6.2",
+        "vue": "^2.5.7",
         "vue-hot-reload-api": "^2.2.4",
         "vue-html-loader": "^1.2.4",
         "vue-loader": "^13.5.0",
+        "vue-property-decorator": "^6.0.0",
+        "vue-router": "^3.0.1",
         "vue-style-loader": "^3.0.3",
         "vue-template-compiler": "^2.5.7",
+        "vuex": "^3.0.1",
         "webpack": "^3.8.1",
         "webpack-dev-server": "^2.9.4",
         "webpack-merge": "^4.1.1"
