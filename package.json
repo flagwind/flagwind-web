@@ -36,6 +36,7 @@
         "iview": "^2.7.3"
     },
     "peerDependencies": {
+        "flagwind-core": "^1.0.3",
         "vue": "^2.5.7"
     },
     "devDependencies": {
@@ -44,7 +45,6 @@
         "@types/highlight.js": "^9.12.2",
         "@types/mocha": "^2.2.44",
         "@types/node": "^8.0.47",
-        "add": "^2.0.6",
         "autoprefixer": "^7.1.2",
         "babel-core": "^6.26.0",
         "babel-loader": "^7.1.2",
