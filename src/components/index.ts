@@ -9,16 +9,20 @@
  */
 
 import iview, { install as iviewInstall } from "./iview";
+import web, { install as webInstall } from "./web";
 
 const components =
 {
-    ...iview
+    ...iview,
+    ...web
 };
 
 // tslint:disable-next-line:variable-name
 const install = function(Vue: any, opts: any = {})
 {
     iviewInstall(Vue, opts);
+    
+    webInstall(Vue, opts);
 };
 
 export default { ...components, install };

@@ -32,6 +32,11 @@ const menus =
                         title: "按钮",
                         path: "/components/button",
                         icon: "social-youtube-outline"
+                    },
+                    {
+                        title: "数字滚动",
+                        path: "/components/numberScroll",
+                        icon: "social-youtube-outline"
                     }
                 ]
             }

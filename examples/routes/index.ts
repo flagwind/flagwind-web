@@ -27,6 +27,10 @@ const routes =
     {
         path: "/components/button",
         component: (resolve: any) => (<any>require)(["views/components/button.vue"], resolve)
+    },
+    {
+        path: "/components/numberScroll",
+        component: (resolve: any) => (<any>require)(["views/components/number-scroll.vue"], resolve)
     }
 ];
 
