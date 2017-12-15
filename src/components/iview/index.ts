@@ -90,7 +90,7 @@ export function install(Vue: any, opts: any = {})
         let name = "i" + key;
         let component = components[key];
         
-        component.name = name;
+        // component.name = name;
         
         Vue.component(name, component);
     });

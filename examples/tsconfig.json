@@ -12,7 +12,6 @@
         "module": "esnext",
         "target": "es5",
         "moduleResolution": "node",
-        "isolatedModules": true,
         "sourceMap": true,
         "pretty": true,
         "baseUrl": ".",
