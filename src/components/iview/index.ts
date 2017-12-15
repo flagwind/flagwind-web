@@ -82,12 +82,17 @@ export function install(Vue: any, opts: any = {})
 {
     iview.locale(opts.locale);
     iview.i18n(opts.i18n);
-    
+
     Object.keys(components).forEach(key =>
     {
         // iview 组件统一加小写 "i" 标识
         // 最终在模板中使用组件时以类似 "i-button", "i-icon", "i-table" 方式引用
-        Vue.component("i" + key, components[key]);
+        let name = "i" + key;
+        let component = components[key];
+        
+        component.name = name;
+        
+        Vue.component(name, component);
     });
 }
 

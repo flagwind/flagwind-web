@@ -26,6 +26,7 @@
         "emitDecoratorMetadata": true,
         "allowSyntheticDefaultImports": true,
         "declaration":true,
+        "isolatedModules": false,
         "noEmitHelpers": false,
         "declarationDir":"./typings",
         "lib": 
