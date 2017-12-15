@@ -7,4 +7,5 @@
  */
 
 export * from "./common";
+export * from "./decorators";
 export { default as components } from "./components";

@@ -10,8 +10,7 @@
 
 <script lang="ts">
 import * as models from "../models";
-import { component } from "../decorators";
-import { Component } from "src/index";
+import { component, Component } from "src/index";
 
 /**
  * 表示一个公共头部组件。
@@ -25,9 +24,9 @@ export default class Header extends Component
      * 获取需要展示的菜单列表。
      * @protected
      * @property
-     * @returns Array<models.MenuItem>
+     * @returns Array<models.IMenuItem>
      */
-    protected get menus(): Array<models.MenuItem>
+    protected get menus(): Array<models.IMenuItem>
     {
         return this.$store.getters["menu/items"];
     }

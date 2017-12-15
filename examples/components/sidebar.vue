@@ -21,8 +21,7 @@
 
 <script lang="ts">
 import * as models from "../models";
-import { component } from "../decorators";
-import { Component } from "src/index";
+import { component, Component } from "src/index";
 
 /**
  * 表示一个公共侧边栏组件。
@@ -47,9 +46,9 @@ export default class Sidebar extends Component
      * 获取需要展示的菜单列表。
      * @protected
      * @property
-     * @returns Array<models.MenuItem>
+     * @returns Array<models.IMenuItem>
      */
-    protected get menus(): Array<models.MenuItem>
+    protected get menus(): Array<models.IMenuItem>
     {
         let path: string = this.$route.path;
         let parentPath = path.substring(0, path.lastIndexOf("/"));

@@ -6,7 +6,6 @@
  * Copyright (C) 2010-2017 Flagwind Inc. All rights reserved. 
  */
 
-import MenuItem from "./menu-item";
+import IMenuItem from "./menu-item";
 
-export { MenuItem };
-
+export { IMenuItem };

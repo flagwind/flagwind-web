@@ -16,16 +16,16 @@ export default class State
     /**
      * 获取所有菜单项列表。
      * @member
-     * @returns Array<models.MenuItem>
+     * @returns Array<models.IMenuItem>
      */
-    public items: Array<models.MenuItem> = new Array<models.MenuItem>();
+    public items: Array<models.IMenuItem> = new Array<models.IMenuItem>();
     
     /**
      * 查找指定路径的菜单项。
      * @param  {string} path 菜单路径字符串。
-     * @returns models.MenuItem 菜单项，如果未找到对应路径的菜单项则为 null。
+     * @returns models.IMenuItem 菜单项，如果未找到对应路径的菜单项则为 null。
      */
-    public findItem(path: string, items: Array<models.MenuItem> = this.items): models.MenuItem
+    public findItem(path: string, items: Array<models.IMenuItem> = this.items): models.IMenuItem
     {
         // 不允许查找根路径
         if(path === "/")
@@ -33,7 +33,7 @@ export default class State
             return null;
         }
         
-        let result: models.MenuItem = null;
+        let result: models.IMenuItem = null;
         
         for(let item of items)
         {

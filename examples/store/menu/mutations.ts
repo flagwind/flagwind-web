@@ -14,14 +14,14 @@ import InvalidOperationException = flagwind.InvalidOperationException;
 import * as models from "../../models";
 import State from "./state";
 
-export function ADD(state: State, value: { path: string; items: Array<models.MenuItem> }): void
+export function ADD(state: State, value: { path: string; items: Array<models.IMenuItem> }): void
 {
     if(!value.path)
     {
         throw new ArgumentException("path is invalid.");
     }
 
-    let children: Array<models.MenuItem>;           // 子菜单列表
+    let children: Array<models.IMenuItem>;           // 子菜单列表
     
     if(value.path !== "/")
     {
@@ -37,7 +37,7 @@ export function ADD(state: State, value: { path: string; items: Array<models.Men
             else
             {
                 // 如果父菜单没有挂载 "children"，则初始化一个子菜单数组
-                children = new Array<models.MenuItem>();
+                children = new Array<models.IMenuItem>();
                 
                 parent.children = children;
             }

@@ -14,8 +14,7 @@
 </template>
 
 <script lang="ts">
-import { component } from "../decorators";
-import { Component } from "src/index";
+import { component, Component } from "src/index";
 import Sidebar from "../components/sidebar.vue";
 
 /**

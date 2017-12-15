@@ -10,7 +10,7 @@ import * as models from "../../models";
 import { Getter, GetterTree } from "vuex";
 import State from "./state";
 
-export function items(state: State): Array<models.MenuItem>
+export function items(state: State): Array<models.IMenuItem>
 {
     return state.items;
 }

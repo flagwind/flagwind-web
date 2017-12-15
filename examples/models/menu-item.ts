@@ -11,7 +11,7 @@
  * @interface
  * @version 1.0.0
  */
-export default interface MenuItem
+export default interface IMenuItem
 {
     /**
      * 获取或设置标题。
@@ -45,6 +45,6 @@ export default interface MenuItem
      * 获取或设置子菜单。
      * @property
      * @returns Array<MenuItem>
-     */ 
-    children?: Array<MenuItem>;
+     */
+    children?: Array<IMenuItem>;
 }

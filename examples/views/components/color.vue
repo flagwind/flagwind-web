@@ -112,8 +112,7 @@
 </template>
 
 <script lang="ts">
-import { component } from "../../decorators";
-import { View } from "src/index";
+import { component, View } from "src/index";
 
 @component
 export default class Color extends View
