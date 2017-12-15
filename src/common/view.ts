@@ -8,6 +8,7 @@
  * Copyright (C) 2010-2017 Flagwind Inc. All rights reserved. 
  */
 
+import flagwind from "flagwind-core";
 import { Component } from "./component";
 
 /**
@@ -17,5 +18,14 @@ import { Component } from "./component";
  */
 export class View extends Component
 {
-    
+    /**
+     * 获取默认服务容器实例。
+     * @protected
+     * @property
+     * @returns flagwind.IServiceProvider
+     */
+    protected get serviceProvier(): flagwind.IServiceProvider
+    {
+        return flagwind.ServiceProviderFactory.instance.default;
+    }
 }
