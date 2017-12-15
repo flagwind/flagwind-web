@@ -38,10 +38,10 @@ export default class NumberScroll extends Component
     protected numberContentStyle: object = {};
 
     /**
-     * 获取当前代码所呈现的编程语言风格。
+     * 控制数字每一行的属性
      * @protected
      * @property
-     * @returns string
+     * @returns object
      */
     protected get lineStyle(): object
     {
