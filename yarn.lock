@@ -6322,9 +6322,9 @@ tslib@^1.7.1:
   version "1.8.0"
   resolved "http://registry.npm.taobao.org/tslib/download/tslib-1.8.0.tgz#dc604ebad64bcbf696d613da6c954aa0e7ea1eb6"
 
-tslint-config-flagwind@^1.0.0:
-  version "1.0.0"
-  resolved "http://registry.npm.taobao.org/tslint-config-flagwind/download/tslint-config-flagwind-1.0.0.tgz#196550cf96faf3a5820a2ea6de250a849fa979a8"
+tslint-config-flagwind@1.0.1:
+  version "1.0.1"
+  resolved "http://registry.npm.taobao.org/tslint-config-flagwind/download/tslint-config-flagwind-1.0.1.tgz#d27076d7f156bbeb36f8b986f6f32fcef9b94d75"
 
 tslint-loader@^3.5.3:
   version "3.5.3"
