@@ -40,7 +40,7 @@ export default interface IMenuItem
      * @returns boolean
      */
     visible?: boolean;
-
+    
     /**
      * 获取或设置子菜单。
      * @property
