@@ -53,37 +53,37 @@
             position: absolute;
         }
     }
-}
 
-.fw-number-counter-animating-up
-{
-    .fw-number-counter-ribbon-inner
+    &-animating-up
     {
-        transition: transform 2s;
+        .fw-number-counter-ribbon-inner
+        {
+            transition: transform 2s;
+        }
+        
+        &.fw-number-counter-animating
+        {
+            .fw-number-counter-ribbon-inner
+            {
+                transform: translateY(-100%);
+            }
+        }
     }
     
-    &.fw-number-counter-animating
+    &-animating-down
     {
         .fw-number-counter-ribbon-inner
         {
             transform: translateY(-100%);
         }
-    }
-}
-
-.fw-number-counter-animating-down
-{
-    .fw-number-counter-ribbon-inner
-    {
-        transform: translateY(-100%);
-    }
-
-    &.fw-number-counter-animating
-    {
-        .fw-number-counter-ribbon-inner
+    
+        &.fw-number-counter-animating
         {
-            transition: transform 2s;
-            transform: translateY(0);
+            .fw-number-counter-ribbon-inner
+            {
+                transition: transform 2s;
+                transform: translateY(0);
+            }
         }
     }
 }
