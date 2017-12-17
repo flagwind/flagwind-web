@@ -34,6 +34,7 @@
     },
     "dependencies": {
         "iview": "^2.7.3",
+        "odometer": "^0.4.8",
         "vue-property-decorator": "^6.0.0"
     },
     "peerDependencies": {

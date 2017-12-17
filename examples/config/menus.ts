@@ -32,6 +32,11 @@ const menus =
                         title: "按钮",
                         path: "/components/button",
                         icon: "social-youtube-outline"
+                    },
+                    {
+                        title: "数字计数",
+                        path: "/components/number-counter",
+                        icon: "ios-more"
                     }
                 ]
             }
