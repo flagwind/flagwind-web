@@ -1,0 +1,20 @@
+<div class="u-code">
+    <pre><code ref="code1" :class="language"><slot></slot></code></pre>
+    
+    <span class="u-code-scale" @click="onScale">
+        <i-tooltip content="放大" placement="top" transfer>
+            <i-icon type="qr-scanner" size="18"></i-icon>
+        </i-tooltip>
+    </span>
+    
+    <span class="u-code-copy" @click="onCopy">
+        <i-tooltip content="复制代码" placement="top" transfer>
+            <i-icon type="clipboard" size="18" v-show="!isCopy"></i-icon>
+            <i-icon class="u-code-icon-copy-complete" type="checkmark" size="18" v-show="isCopy"></i-icon>
+        </i-tooltip>
+    </span>
+    
+    <i-modal class-name="u-code-scale-modal" :title="title" width="65" v-model="isScale">
+        <pre><code :class="language" ref="code2"></code></pre>
+    </i-modal>
+</div>

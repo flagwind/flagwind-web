@@ -1,0 +1,7 @@
+{
+    "rules":
+    {
+        // 限定文件编码必须为 utf-8
+        "encoding": true
+    }
+}

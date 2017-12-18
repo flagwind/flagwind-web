@@ -1,0 +1,30 @@
+{
+    "include": 
+    [
+        "./**/*"
+    ],
+    "compilerOptions": 
+    {
+        "allowSyntheticDefaultImports": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "allowJs": true,
+        "module": "esnext",
+        "target": "es5",
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "pretty": true,
+        "baseUrl": ".",
+        "paths": {
+            "src/*": ["../src/*"],
+            "examples/*": ["./*"],
+            "views/*": ["./views/*"]
+        },
+        "lib": 
+        [
+            "dom",
+            "es5",
+            "es2015.promise"
+        ]
+    }
+}

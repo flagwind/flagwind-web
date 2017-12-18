@@ -1,0 +1,45 @@
+<i-row :id="title" class="u-example" :cl0ass="{'u-example-vertical': vertical}">
+    <!-- 介绍面板 BEGIN -->
+    <i-col class="u-example-intro" :span="vertical ? 24 : 12">
+        <!-- 范例 BEGIN -->
+        <div class="u-example-case">
+            <slot name="case"></slot>
+        </div>
+        <!-- 范例 END -->
+        
+        <!-- 标题 BEGIN -->
+        <div class="u-example-title">
+            <strong>{{title}}</strong>
+        </div>
+        <!-- 标题 END -->
+
+        <!-- 描述 BEGIN -->
+        <div class="u-example-desc">
+            <slot name="desc"></slot>
+        </div>
+        <!-- 描述 END -->
+    </i-col>
+    <!-- 介绍面板 END -->
+
+    <!-- 分隔条 BEGIN -->
+    <div class="u-example-split"></div>
+    <!-- 分隔条 END -->
+
+    <!-- 代码面板 BEGIN -->
+    <i-col class="u-example-code" :style="codePanelStyle" :span="vertical ? 24 : 12">
+        <!-- 代码包装器 BEGIN -->
+        <div class="u-example-code-wrap" :style="codeWrapStyle">
+            <slot name="code"></slot>
+        </div>
+        <!-- 代码包装器 END -->
+        
+        <!-- 展开/收缩操作条 BEGIN -->
+        <div class="u-example-code-expand" v-if="showExpand" @click="onExpandCode">
+            <i-icon type="ios-arrow-down" v-show="!isExpanded"></i-icon>
+            <i-icon type="ios-arrow-up" v-show="isExpanded"></i-icon>
+            <i-button type="text" v-show="hideCode && !isExpanded">展开代码</i-button>
+        </div>
+        <!-- 展开/收缩操作条 END -->
+    </i-col>
+    <!-- 代码面板 END -->
+</i-row>

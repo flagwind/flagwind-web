@@ -1,0 +1,42 @@
+{
+    "include": 
+    [
+        "./src/**/*"
+    ],
+    "exclude": 
+    [
+        "node_modules",
+        "examples",
+        "dist"
+    ],
+    "compilerOptions": 
+    {
+        "module": "esnext",
+        "target": "es5",
+        "moduleResolution": "node",
+        "stripInternal": true,
+        "pretty": true,
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "noImplicitReturns": true,
+        "noUnusedLocals": true,
+        "strictNullChecks": false,
+        "suppressImplicitAnyIndexErrors": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "allowSyntheticDefaultImports": true,
+        "declaration":true,
+        "noEmitHelpers": false,
+        "declarationDir":"./typings",
+        "lib": 
+        [
+            "dom",
+            "es5",
+            "es2015.promise"
+        ],
+        "baseUrl": "./",
+        "paths": {
+            "src": ["src"]
+        }
+    }
+}

@@ -1,0 +1,89 @@
+.fw-number-counter
+{
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+
+    &-digit
+    {
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+
+        &-spacer
+        {
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+
+            visibility: hidden;
+        }
+
+        &-inner
+        {
+            text-align: left;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+        }
+    }
+
+    &-ribbon
+    {
+        display: block;
+
+        &-inner
+        {
+            display: block;
+            backface-visibility: hidden;
+        }
+    }
+
+    &-value
+    {
+        display: block;
+        transform: translateZ(0);
+
+        &.fw-number-counter-last-value
+        {
+            position: absolute;
+        }
+    }
+
+    &-animating-up
+    {
+        .fw-number-counter-ribbon-inner
+        {
+            transition: transform 2s;
+        }
+        
+        &.fw-number-counter-animating
+        {
+            .fw-number-counter-ribbon-inner
+            {
+                transform: translateY(-100%);
+            }
+        }
+    }
+    
+    &-animating-down
+    {
+        .fw-number-counter-ribbon-inner
+        {
+            transform: translateY(-100%);
+        }
+    
+        &.fw-number-counter-animating
+        {
+            .fw-number-counter-ribbon-inner
+            {
+                transition: transform 2s;
+                transform: translateY(0);
+            }
+        }
+    }
+}
