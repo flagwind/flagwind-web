@@ -6,6 +6,8 @@
  * Copyright (C) 2010-2017 Flagwind Inc. All rights reserved. 
  */
 
+import "iview";
+
 export * from "./common";
 export * from "./decorators";
 export { default as components } from "./components";

@@ -10,7 +10,7 @@
 
 import Vue from "vue";
 import IView from "../components/iview/typings";
-import components from "../components";
+import iview from "../components/iview";
 
 /**
  * 定义组件的基础功能。
@@ -25,7 +25,7 @@ export class Component extends Vue
      */
     protected get $loading(): IView.ILoadingBarInstance
     {
-        return components.LoadingBar;
+        return iview.LoadingBar;
     }
     
     /**
@@ -34,7 +34,7 @@ export class Component extends Vue
      */
     protected get $message(): IView.IMessageInstance
     {
-        return components.Message;
+        return iview.Message;
     }
     
     /**
@@ -43,7 +43,7 @@ export class Component extends Vue
      */
     protected get $modal(): IView.IModalInstance
     {
-        return components.Modal;
+        return iview.Modal;
     }
     
     /**
@@ -52,7 +52,7 @@ export class Component extends Vue
      */
     protected get $notice(): IView.INoticeInstance
     {
-        return components.Notice;
+        return iview.Notice;
     }
     
     /**
@@ -61,6 +61,6 @@ export class Component extends Vue
      */
     protected get $spin(): IView.ISpinInstance
     {
-        return components.Spin;
+        return iview.Spin;
     }
 }

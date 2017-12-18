@@ -25,6 +25,23 @@ const COUNT_MS_PER_FRAME = 1000 / COUNT_FRAMERATE;
 const FORMAT_PARSER = /^\(?([^)]*)\)?(?:(.)(d+))?$/;
 const TRANSITION_END_EVENTS = "transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd";
 
+const DIGIT_HTML = `
+<span class="fw-number-counter-digit">
+    <span class="fw-number-counter-digit-spacer">8</span>
+    <span class="fw-number-counter-digit-inner">
+        <span class="fw-number-counter-ribbon">
+            <span class="fw-number-counter-ribbon-inner">
+                <span class="fw-number-counter-value"></span>
+            </span>
+        </span>
+    </span>
+</span>
+`;
+
+const MARK_HTML = `
+<span class="fw-number-counter-format-mark"></span>
+`;
+
 const now = function(): number
 {
     let performance = window.performance;
@@ -94,23 +111,6 @@ const addClass = function(element: HTMLElement, name: string): void
 
     element.className += ` ${name}`;
 };
-
-const DIGIT_HTML = `
-<span class="fw-number-counter-digit">
-    <span class="fw-number-counter-digit-spacer">8</span>
-    <span class="fw-number-counter-digit-inner">
-        <span class="fw-number-counter-ribbon">
-            <span class="fw-number-counter-ribbon-inner">
-                <span class="fw-number-counter-value"></span>
-            </span>
-        </span>
-    </span>
-</span>
-`;
-
-const MARK_HTML = `
-<span class="fw-number-counter-format-mark"></span>
-`;
 
 /**
  * 表示一个带过渡特效的数字组件。
