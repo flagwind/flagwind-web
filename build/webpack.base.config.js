@@ -89,7 +89,7 @@ module.exports =
             },
             {
                 test: /\.(html|tpl)$/,
-                loader: "html-loader"
+                loader: "raw-loader"
             }
         ]
     },
