@@ -23,7 +23,7 @@ const components =
     Card: iview.Card,
     Carousel: iview.Carousel,
     CarouselItem: iview.Carousel.Item,
-    Cascader: iview.Carousel,
+    Cascader: iview.Cascader,
     Checkbox: iview.Checkbox,
     CheckboxGroup: iview.Checkbox.Group,
     Col: iview.Col,

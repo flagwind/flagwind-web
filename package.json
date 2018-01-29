@@ -1,6 +1,6 @@
 {
     "name": "flagwind-web",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "flagwind web library",
     "author": "jason <jasonsoop@gmail.com>",
     "scripts": {
@@ -33,7 +33,7 @@
         "url": "https://github.com/flagwind/flagwind-web/issues"
     },
     "dependencies": {
-        "iview": "^2.7.3",
+        "iview": "2.9.0",
         "vue-property-decorator": "^6.0.0"
     },
     "peerDependencies": {
@@ -89,6 +89,7 @@
         "phantomjs-prebuilt": "^2.1.16",
         "postcss-import": "^11.0.0",
         "postcss-loader": "^2.0.8",
+        "raw-loader": "^0.5.1",
         "sinon": "^4.0.0",
         "sinon-chai": "^2.8.0",
         "style-loader": "^0.19.0",

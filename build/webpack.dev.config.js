@@ -36,6 +36,7 @@ module.exports = webpackMerge(webpackBaseConfig,
     [
         new FriendlyErrorsPlugin(),
         new webpack.optimize.CommonsChunkPlugin({ name: "vendors", filename: "vendor.bundle.js" }),
+        new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin
         ({
             inject: true,
