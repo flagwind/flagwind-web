@@ -8,8 +8,8 @@
  * Copyright (C) 2010-2017 Flagwind Inc. All rights reserved. 
  */
 
-import component from "vue-class-component";
-import { Prop as config, Model as model, Watch as watch } from "vue-property-decorator";
+import component, { mixins } from "vue-class-component";
+import { Prop as config, Model as model, Watch as watch, Inject as inject, Provide as provice } from "vue-property-decorator";
 
 // 注册路由相关钩子函数
 component.registerHooks
@@ -19,4 +19,4 @@ component.registerHooks
     "beforeRouteUpdate"
 ]);
 
-export { component, config, model, watch };
+export { component, mixins, config, model, watch, inject, provice };

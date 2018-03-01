@@ -1,6 +1,6 @@
 {
     "name": "flagwind-web",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "flagwind web library",
     "author": "jason <jasonsoop@gmail.com>",
     "scripts": {
@@ -33,7 +33,8 @@
         "url": "https://github.com/flagwind/flagwind-web/issues"
     },
     "dependencies": {
-        "iview": "2.9.0",
+        "iview": "2.9.2",
+        "vue-class-component": "^6.2.0",
         "vue-property-decorator": "^6.0.0"
     },
     "peerDependencies": {

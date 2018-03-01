@@ -3605,9 +3605,9 @@ istanbul@^0.4.0:
     which "^1.1.1"
     wordwrap "^1.0.0"
 
-iview@2.9.0:
-  version "2.9.0"
-  resolved "http://registry.npm.taobao.org/iview/download/iview-2.9.0.tgz#6267966bf8b198db53504d49c5478036a1a84fa7"
+iview@2.9.2:
+  version "2.9.2"
+  resolved "http://registry.npm.taobao.org/iview/download/iview-2.9.2.tgz#737e896d2028a9d3095f6d0b541233789ae40417"
   dependencies:
     async-validator "^1.8.2"
     deepmerge "^1.5.2"
@@ -6631,6 +6631,10 @@ void-elements@^2.0.0:
 vue-class-component@^6.0.0:
   version "6.1.1"
   resolved "http://registry.npm.taobao.org/vue-class-component/download/vue-class-component-6.1.1.tgz#2e095036648b428a4f1e9ec8a8bbe7833a6d1879"
+
+vue-class-component@^6.2.0:
+  version "6.2.0"
+  resolved "http://registry.npm.taobao.org/vue-class-component/download/vue-class-component-6.2.0.tgz#7adb1daa9a868c75f30f97f33f4f1b94aee62089"
 
 vue-hot-reload-api@^2.2.0, vue-hot-reload-api@^2.2.4:
   version "2.2.4"
