@@ -1809,9 +1809,9 @@ deep-is@~0.1.3:
   version "0.1.3"
   resolved "http://registry.npm.taobao.org/deep-is/-/deep-is-0.1.3.tgz#b369d6fb5dbc13eecf524f91b070feedc357cf34"
 
-deepmerge@^1.5.2:
-  version "1.5.2"
-  resolved "http://registry.npm.taobao.org/deepmerge/download/deepmerge-1.5.2.tgz#10499d868844cdad4fee0842df8c7f6f0c95a753"
+deepmerge@^2.1.0:
+  version "2.1.0"
+  resolved "http://registry.npm.taobao.org/deepmerge/download/deepmerge-2.1.0.tgz#511a54fff405fc346f0240bb270a3e9533a31102"
 
 defaults@^1.0.0:
   version "1.0.3"
@@ -2008,9 +2008,9 @@ electron-to-chromium@^1.2.7, electron-to-chromium@^1.3.27:
   version "1.3.27"
   resolved "http://registry.npm.taobao.org/electron-to-chromium/download/electron-to-chromium-1.3.27.tgz#78ecb8a399066187bb374eede35d9c70565a803d"
 
-element-resize-detector@^1.1.13:
-  version "1.1.13"
-  resolved "http://registry.npm.taobao.org/element-resize-detector/download/element-resize-detector-1.1.13.tgz#f61907e98a91b1ad215f92790bc15113df68444d"
+element-resize-detector@^1.1.14:
+  version "1.1.14"
+  resolved "http://registry.npm.taobao.org/element-resize-detector/download/element-resize-detector-1.1.14.tgz#af064a0a618a820ad570a95c5eec5b77be0128c1"
   dependencies:
     batch-processor "^1.0.0"
 
@@ -2537,9 +2537,9 @@ flagged-respawn@^0.3.2:
   version "0.3.2"
   resolved "http://registry.npm.taobao.org/flagged-respawn/download/flagged-respawn-0.3.2.tgz#ff191eddcd7088a675b2610fffc976be9b8074b5"
 
-flagwind-core@1.0.8:
-  version "1.0.8"
-  resolved "http://registry.npm.taobao.org/flagwind-core/download/flagwind-core-1.0.8.tgz#43a3e106a589f5bbefb07222674a77e4e8566f74"
+flagwind-core@^1.1.0:
+  version "1.1.0"
+  resolved "http://registry.npm.taobao.org/flagwind-core/download/flagwind-core-1.1.0.tgz#3c5cf9c442c97ede8350f14747303f8160ab5c2b"
 
 flatten@^1.0.2:
   version "1.0.2"
@@ -3605,13 +3605,14 @@ istanbul@^0.4.0:
     which "^1.1.1"
     wordwrap "^1.0.0"
 
-iview@2.9.2:
-  version "2.9.2"
-  resolved "http://registry.npm.taobao.org/iview/download/iview-2.9.2.tgz#737e896d2028a9d3095f6d0b541233789ae40417"
+iview@^2.11.0:
+  version "2.11.0"
+  resolved "http://registry.npm.taobao.org/iview/download/iview-2.11.0.tgz#76fc8f050802544675b6fcf02dbe1dbf89b95867"
   dependencies:
     async-validator "^1.8.2"
-    deepmerge "^1.5.2"
-    element-resize-detector "^1.1.13"
+    deepmerge "^2.1.0"
+    element-resize-detector "^1.1.14"
+    js-calendar "^1.2.3"
     lodash.throttle "^4.1.1"
     popper.js "^0.6.4"
     tinycolor2 "^1.4.1"
@@ -3619,6 +3620,10 @@ iview@2.9.2:
 js-base64@^2.1.9:
   version "2.3.2"
   resolved "http://registry.npm.taobao.org/js-base64/download/js-base64-2.3.2.tgz#a79a923666372b580f8e27f51845c6f7e8fbfbaf"
+
+js-calendar@^1.2.3:
+  version "1.2.3"
+  resolved "http://registry.npm.taobao.org/js-calendar/download/js-calendar-1.2.3.tgz#a583b0644b4e695ba394f344d103dbcc7a7a7d3e"
 
 js-tokens@^3.0.0, js-tokens@^3.0.2:
   version "3.0.2"
