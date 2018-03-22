@@ -8,9 +8,8 @@
  * Copyright (C) 2010-2017 Flagwind Inc. All rights reserved. 
  */
 
-import flagwind from "flagwind-core";
-import Logger = flagwind.Logger;
 import Vue from "vue";
+import flagwind from "flagwind-core";
 import IView from "../components/iview/typings";
 import iview from "../components/iview";
 
@@ -21,6 +20,17 @@ import iview from "../components/iview";
  */
 export class Component extends Vue
 {
+    /**
+     * 获取默认服务容器实例。
+     * @protected
+     * @property
+     * @returns flagwind.IServiceProvider
+     */
+    protected get serviceProvier(): flagwind.IServiceProvider
+    {
+        return flagwind.ServiceProviderFactory.instance.default;
+    }
+
     /**
      * 获取一个全局加载条实例。
      * @returns IView.ILoadingBarInstance
@@ -64,14 +74,5 @@ export class Component extends Vue
     protected get $spin(): IView.ISpinInstance
     {
         return iview.Spin;
-    }
-    
-    /**
-     * 获取一个日志记录器实例。
-     * @returns Logger
-     */
-    protected get logger(): Logger
-    {
-        return Logger;
     }
 }

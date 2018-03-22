@@ -73,25 +73,53 @@ const components =
     Transfer: iview.Transfer,
     Tree: iview.Tree,
     Upload: iview.Upload,
-    Circle: iview.Circle,
-    Switch: iview.Switch
+    Layout: iview.Layout,
+    Header: iview.Header,
+    Sider: iview.Sider,
+    Content: iview.Content,
+    Footer: iview.Footer
 };
 
-components.Circle.name = "iCircle";
-components.Switch.name = "iSwitch";
+iview.Circle.name = "iCircle";
+iview.Switch.name = "iSwitch";
+
+const iviews =
+{
+    ...components,
+    iButton: components.Button,
+    iCircle: iview.Circle,
+    iCol: components.Col,
+    iContent: components.Content,
+    iForm: components.Form,
+    iFooter: components.Footer,
+    iHeader: components.Header,
+    iInput: components.Input,
+    iMenu: components.Menu,
+    iOption: components.Option,
+    iProgress: components.Progress,
+    iSelect: components.Select,
+    iSwitch: iview.Switch,
+    iTable: components.Table
+};
 
 // tslint:disable-next-line:variable-name
 export function install(Vue: any, opts: any = {})
 {
     iview.locale(opts.locale);
     iview.i18n(opts.i18n);
-        
-    Object.keys(components).forEach(key =>
+    
+    Object.keys(iviews).forEach(key =>
     {
+        // 先以原始名字注册一下组件
+        Vue.component(key, iviews[key]);
+        
         // iview 组件统一加小写 "i" 标识
         // 最终在模板中使用组件时以类似 "i-button", "i-icon", "i-table" 方式引用
-        Vue.component("i" + key, components[key]);
+        if(key[0] !== "i")
+        {
+            Vue.component("i" + key, iviews[key]);
+        }
     });
 }
 
-export default components;
+export default iview;
