@@ -37,6 +37,11 @@ const menus =
                         title: "数字计数",
                         path: "/components/number-counter",
                         icon: "ios-more"
+                    },
+                    {
+                        title: "编辑域",
+                        path: "/components/edit-field",
+                        icon: "ios-compose-outline"
                     }
                 ]
             }

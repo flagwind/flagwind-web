@@ -1,4 +1,6 @@
 /*!
+ * This file is part of `components` module. 
+ * 
  * Authors:
  *      jason <jasonsoop@gmail.com>
  * 
@@ -6,5 +8,4 @@
  * Copyright (C) 2010-2017 Flagwind Inc. All rights reserved. 
  */
 
-@import "number-counter";
-@import "edit-field";
+export { default } from "./edit-field";

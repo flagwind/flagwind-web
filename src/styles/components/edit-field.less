@@ -1,0 +1,58 @@
+/*!
+ * Authors:
+ *      jason <jasonsoop@gmail.com>
+ * 
+ * Licensed under the MIT License.
+ * Copyright (C) 2010-2017 Flagwind Inc. All rights reserved. 
+ */
+
+.fw-edit-field
+{
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    vertical-align: middle;
+    color: @text-color;
+    font-size: @font-size-base;
+    line-height: normal;
+
+    &-value
+    {
+        display: block;
+        box-sizing: border-box;
+        outline: none;
+        // user-select: none;
+        // cursor: pointer;
+        position: relative;
+
+        background-color: #fff;
+        // border-radius: @btn-border-radius;
+        // border: 1px solid @border-color-base;
+        transition: all @transition-time @ease-in-out;
+
+        padding: 0 24px 0 4px;
+
+        .fw-edit-field-label
+        {
+            display: block;
+            height: @input-height-base - 2px;
+            line-height: @input-height-base - 2px;
+            // color: @input-placeholder-color;
+            // font-size: @font-size-small;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            padding-left: 4px;
+            padding-right: 22px;
+        }
+
+        .fw-edit-field-action
+        {
+            display: inline-block;
+            font-size: 14px;
+            padding-left: 10px;
+            color: @primary-color;
+            cursor: pointer;
+        }
+    }    
+}

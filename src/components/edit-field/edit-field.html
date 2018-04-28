@@ -1,0 +1,9 @@
+<div class="fw-edit-field">
+    <div v-show="!editing" class="fw-edit-field-value">
+        <span class="fw-edit-field-label">jason<i-icon class="fw-edit-field-action" type="edit" @click.native="onEdit"></i-icon></span>
+    </div>
+    <div v-show="editing" class="fw-edit-field-control">
+        <slot>
+        </slot>
+    </div>
+</div>
