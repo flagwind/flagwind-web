@@ -10,10 +10,12 @@
 
 import iview, { install as installIView } from "./iview";
 import NumberCounter from "./number-counter";
+import EditField from "./edit-field";
 
 const components =
 {
-    NumberCounter
+    NumberCounter,
+    EditField
 };
 
 // tslint:disable-next-line:variable-name

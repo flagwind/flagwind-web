@@ -1,0 +1,50 @@
+/*!
+ * Authors:
+ *      jason <jasonsoop@gmail.com>
+ * 
+ * Licensed under the MIT License.
+ * Copyright (C) 2010-2017 Flagwind Inc. All rights reserved. 
+ */
+
+ @keyframes edit-field-loading
+ {
+    from { transform: rotate(0deg);}
+    50%  { transform: rotate(180deg);}
+    to   { transform: rotate(360deg);}
+}
+
+.fw-edit-field
+{
+    display: inline-block;
+    width: 100%;
+
+    &-label
+    {
+        display: inline-block;
+        white-space: pre-line;
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+
+    &-control
+    {
+        display: inline-block;
+    }
+
+    &-action
+    {
+        display: inline-block;
+
+        .ivu-btn
+        {
+            color: @primary-color;
+        }
+    }
+
+    &-saving
+    {
+        font-size: 16px;
+        color: @primary-color;
+        animation: edit-field-loading 1s linear infinite;
+    }
+}
