@@ -31,6 +31,10 @@ const routes =
     {
         path: "/components/number-counter",
         component: (resolve: any) => (<any>require)(["views/components/number-counter.vue"], resolve)
+    },
+    {
+        path: "/components/edit-field",
+        component: (resolve: any) => (<any>require)(["views/components/edit-field.vue"], resolve)
     }
 ];
 
