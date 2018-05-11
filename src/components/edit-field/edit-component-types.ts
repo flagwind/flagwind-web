@@ -52,10 +52,22 @@ enum EditComponentTypes
     timePicker = "i-time-picker",
 
     /**
-     * 颜色选择器。
+     * 级联选择。
      * @member
      */
-    colorPicker = "i-color-picker"
+    cascader = "i-cascader",
+
+    /**
+     * 单选框组。
+     * @member
+     */
+    radioGroup = "i-radio-group",
+    
+    /**
+     * 复选框组。
+     * @member
+     */
+    checkboxGroup = "i-checkbox-group"
 }
 
 export default EditComponentTypes;

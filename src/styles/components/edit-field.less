@@ -6,53 +6,45 @@
  * Copyright (C) 2010-2017 Flagwind Inc. All rights reserved. 
  */
 
+ @keyframes edit-field-loading
+ {
+    from { transform: rotate(0deg);}
+    50%  { transform: rotate(180deg);}
+    to   { transform: rotate(360deg);}
+}
+
 .fw-edit-field
 {
     display: inline-block;
     width: 100%;
-    box-sizing: border-box;
-    vertical-align: middle;
-    color: @text-color;
-    font-size: @font-size-base;
-    line-height: normal;
 
-    &-value
+    &-label
     {
-        display: block;
-        box-sizing: border-box;
-        outline: none;
-        // user-select: none;
-        // cursor: pointer;
-        position: relative;
+        display: inline-block;
+        white-space: pre-line;
+        word-wrap: break-word;
+        word-break: break-all;
+    }
 
-        background-color: #fff;
-        // border-radius: @btn-border-radius;
-        // border: 1px solid @border-color-base;
-        transition: all @transition-time @ease-in-out;
+    &-control
+    {
+        display: inline-block;
+    }
 
-        padding: 0 24px 0 4px;
+    &-action
+    {
+        display: inline-block;
 
-        .fw-edit-field-label
+        .ivu-btn
         {
-            display: block;
-            height: @input-height-base - 2px;
-            line-height: @input-height-base - 2px;
-            // color: @input-placeholder-color;
-            // font-size: @font-size-small;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            padding-left: 4px;
-            padding-right: 22px;
-        }
-
-        .fw-edit-field-action
-        {
-            display: inline-block;
-            font-size: 14px;
-            padding-left: 10px;
             color: @primary-color;
-            cursor: pointer;
         }
-    }    
+    }
+
+    &-saving
+    {
+        font-size: 16px;
+        color: @primary-color;
+        animation: edit-field-loading 1s linear infinite;
+    }
 }
