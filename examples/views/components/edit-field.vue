@@ -24,6 +24,7 @@
                     <i-form-item label="重量" prop="weight">
                         <fw-edit-field :on-change="onValueChange">
                             <i-input-number v-model="productModel.weight" />
+                            <span slot="extra">KG</span>
                         </fw-edit-field>
                     </i-form-item>
 
@@ -121,6 +122,12 @@
                         <td><code>-</code></td>
                     </tr>
                     <tr>
+                        <td>enterSubmit</td>
+                        <td>当编辑组件为输入框时，是否支持回车提交。</td>
+                        <td>Boolean</td>
+                        <td><code>true</code></td>
+                    </tr>
+                    <tr>
                         <td><strong>onChange</strong></td>
                         <td>回调函数，当值发生改变时调用的回调函数，接受两个参数，一个为当前值，一个为修改前的值。<br />该函数支持同步或异步(返回Promise)的方式进行业务处理。</td>
                         <td>Function</td>
@@ -179,7 +186,7 @@ export default class EditFieldView extends View
         productionTime: "08:30:05",
         
         // 描述
-        description: "我是一个多行显示的文本\n我可以支持换成处理的哦",
+        description: "我是一个多行显示的文本\n我可以支持换行处理的哦",
 
         // 发布平台
         publishPlatform: "jd",

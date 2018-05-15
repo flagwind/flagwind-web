@@ -1,6 +1,6 @@
 {
     "name": "flagwind-web",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "description": "flagwind web library",
     "author": "jason <jasonsoop@gmail.com>",
     "scripts": {

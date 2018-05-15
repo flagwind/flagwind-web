@@ -150,6 +150,15 @@ export default class EditField extends Component
      */
     @config({type: [Function], required: true})
     public onChange: Function;
+
+    /**
+     * 获取或设置一个布尔值，表示当编辑组件为单行文本框时，是否按回车键可以提交。
+     * @public
+     * @config
+     * @returns Function
+     */
+    @config({type: Boolean, default: true})
+    public enterSubmit: boolean;
     
     /**
      * 当组件创建完成时调用。
@@ -185,6 +194,12 @@ export default class EditField extends Component
 
         // 绑定内联编辑组件的 input 事件，以便监听数据变动
         this.editComponent.$on("input", this.onInputChange);
+        
+        // 绑定输入框回车键事件
+        if(this.enterSubmit && this.editComponentTag === EditComponentTypes.input)
+        {
+            this.editComponent.$on("on-enter", this.onEditComplte);
+        }
     }
 
     /**
@@ -455,7 +470,5 @@ export default class EditField extends Component
                 break;
             }
         }
-
-        console.log(this.displayValue);
     }
 }
