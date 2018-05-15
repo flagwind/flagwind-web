@@ -115,7 +115,7 @@ export default class EditFieldView extends View
         productionTime: "08:30:05",
         
         // 描述
-        description: "我是一个多行显示的文本\n我可以支持换成处理的哦",
+        description: "我是一个多行显示的文本我可以支持换成处理的哦",
 
         // 发布平台
         publishPlatform: "jd",

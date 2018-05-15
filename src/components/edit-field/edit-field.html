@@ -6,6 +6,9 @@
     <div v-show="editing" class="fw-edit-field-control">
         <slot></slot>
     </div>
+    <div class="fw-edit-field-extra">
+        <slot name="extra"></slot>
+    </div>
     <div class="fw-edit-field-action">
         <i-button v-show="!editing && !saving" type="text" icon="edit" @click="onEdit"></i-button>
         <i-button v-show="editing" type="text" icon="checkmark" @click="onEditComplte"></i-button>
