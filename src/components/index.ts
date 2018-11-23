@@ -8,7 +8,7 @@
  * Copyright (C) 2010-2017 Flagwind Inc. All rights reserved. 
  */
 
-import iview, { install as installIView } from "./iview";
+import { default as iviewComponents, install as iviewInstall } from "./iview";
 import NumberCounter from "./number-counter";
 import EditField from "./edit-field";
 
@@ -21,7 +21,7 @@ const components =
 // tslint:disable-next-line:variable-name
 const install = function(Vue: any, opts: any = {})
 {
-    installIView(Vue, opts);
+    iviewInstall(Vue, opts);
     
     Object.keys(components).forEach(key =>
     {
@@ -31,4 +31,7 @@ const install = function(Vue: any, opts: any = {})
     });
 };
 
-export default { ...iview, ...components, install };
+export * from "./iview";
+export { NumberCounter, EditField };
+
+export default { ...iviewComponents, ...components, install };

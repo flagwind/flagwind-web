@@ -7,7 +7,6 @@
             <template slot="case">
                 <i-button>Default</i-button>
                 <i-button type="primary">Primary</i-button>
-                <i-button type="ghost">Ghost</i-button>
                 <i-button type="dashed">Dashed</i-button>
                 <i-button type="text">Text</i-button>
                 <br/><br/>
@@ -18,7 +17,7 @@
             </template>
             <template slot="desc">
                 <p>按钮类型有：默认按钮、主按钮、幽灵按钮、虚线按钮、文字按钮以及四种颜色按钮。</p>
-                <p>通过设置<code>type</code>为<code>primary</code>、<code>ghost</code>、<code>dashed</code>、<code>text</code>、<code>info</code>、<code>success</code>、<code>warning</code>、<code>error</code>创建不同样式的按钮，不设置为默认样式。</p>
+                <p>通过设置<code>type</code>为<code>primary</code>、<code>dashed</code>、<code>text</code>、<code>info</code>、<code>success</code>、<code>warning</code>、<code>error</code>创建不同样式的按钮，不设置为默认样式。</p>
             </template>
             <u-code slot="code" lang="html">{{code.type}}</u-code>
         </u-example>
@@ -30,14 +29,14 @@
                 <i-button type="primary" shape="circle" icon="ios-search">Search</i-button>
                 <i-button type="primary" shape="circle">Circle</i-button>
                 <br/><br/>
-                <i-button type="ghost" shape="circle" icon="ios-search"></i-button>
-                <i-button type="ghost" icon="ios-search">Search</i-button>
-                <i-button type="ghost" shape="circle" icon="ios-search">Search</i-button>
-                <i-button type="ghost" shape="circle">Circle</i-button>
+                <i-button shape="circle" icon="ios-search"></i-button>
+                <i-button icon="ios-search">Search</i-button>
+                <i-button shape="circle" icon="ios-search">Search</i-button>
+                <i-button shape="circle">Circle</i-button>
             </template>
             <template slot="desc">
                 <p>按钮类型有：默认按钮、主按钮、幽灵按钮、虚线按钮、文字按钮以及四种颜色按钮。</p>
-                <p>通过设置<code>type</code>为<code>primary</code>、<code>ghost</code>、<code>dashed</code>、<code>text</code>、<code>info</code>、<code>success</code>、<code>warning</code>、<code>error</code>创建不同样式的按钮，不设置为默认样式。</p>
+                <p>通过设置<code>type</code>为<code>primary</code>、<code>dashed</code>、<code>text</code>、<code>info</code>、<code>success</code>、<code>warning</code>、<code>error</code>创建不同样式的按钮，不设置为默认样式。</p>
             </template>
             <u-code slot="code" lang="html">{{code.icon}}</u-code>
         </u-example>
@@ -79,9 +78,6 @@
                 <br/><br/>
                 <i-button type="primary">Primary</i-button>
                 <i-button type="primary" disabled>Primary(Disabled)</i-button>
-                <br/><br/>
-                <i-button type="ghost">Ghost</i-button>
-                <i-button type="ghost" disabled>Ghost(Disabled)</i-button>
                 <br/><br/>
                 <i-button type="dashed">Dashed</i-button>
                 <i-button type="dashed" disabled>Dashed(Disabled)</i-button>
@@ -129,82 +125,82 @@
                 <i-button-group>
                     <i-button type="primary">L</i-button>
                     <i-button>M</i-button>
-                    <i-button type="ghost">M</i-button>
+                    <i-button>M</i-button>
                     <i-button type="dashed">R</i-button>
                 </i-button-group>
                 <br/><br/>
-                <h4>i-icons</h4>
+                <h4>Icons</h4>
                 <br/><br/>
                 <i-button-group>
                     <i-button type="primary">
-                        <i-icon type="chevron-left"></i-icon>
+                        <i-icon type="ios-arrow-back"></i-icon>
                         Backward
                     </i-button>
                     <i-button type="primary">
                         Forward
-                        <i-icon type="chevron-right"></i-icon>
+                        <i-icon type="ios-arrow-forward"></i-icon>
                     </i-button>
                 </i-button-group>
                 <i-button-group>
-                    <i-button type="primary" icon="ios-skipbackward"></i-button>
-                    <i-button type="primary" icon="ios-skipforward"></i-button>
+                    <i-button type="primary" icon="ios-skip-backward"></i-button>
+                    <i-button type="primary" icon="ios-skip-forward"></i-button>
                 </i-button-group>
                 <i-button-group>
-                    <i-button type="ghost" icon="ios-color-wand-outline"></i-button>
-                    <i-button type="ghost" icon="ios-sunny-outline"></i-button>
-                    <i-button type="ghost" icon="ios-crop"></i-button>
-                    <i-button type="ghost" icon="ios-color-filter-outline"></i-button>
+                    <i-button icon="ios-color-wand-outline"></i-button>
+                    <i-button icon="ios-sunny-outline"></i-button>
+                    <i-button icon="ios-crop"></i-button>
+                    <i-button icon="ios-color-filter-outline"></i-button>
                 </i-button-group>
                 <br/><br/>
                 <h4>Circle</h4>
                 <br/><br/>
                 <i-button-group shape="circle">
                     <i-button type="primary">
-                        <i-icon type="chevron-left"></i-icon>
+                        <i-icon type="ios-arrow-back"></i-icon>
                         Backward
                     </i-button>
                     <i-button type="primary">
                         Forward
-                        <i-icon type="chevron-right"></i-icon>
+                        <i-icon type="ios-arrow-forward"></i-icon>
                     </i-button>
                 </i-button-group>
                 <i-button-group shape="circle">
-                    <i-button type="primary" icon="ios-skipbackward"></i-button>
-                    <i-button type="primary" icon="ios-skipforward"></i-button>
+                    <i-button type="primary" icon="ios-skip-backward"></i-button>
+                    <i-button type="primary" icon="ios-skip-forward"></i-button>
                 </i-button-group>
                 <i-button-group shape="circle">
-                    <i-button type="ghost" icon="ios-color-wand-outline"></i-button>
-                    <i-button type="ghost" icon="ios-sunny-outline"></i-button>
-                    <i-button type="ghost" icon="ios-crop"></i-button>
-                    <i-button type="ghost" icon="ios-color-filter-outline"></i-button>
+                    <i-button icon="ios-color-wand-outline"></i-button>
+                    <i-button icon="ios-sunny-outline"></i-button>
+                    <i-button icon="ios-crop"></i-button>
+                    <i-button icon="ios-color-filter-outline"></i-button>
                 </i-button-group>
                 <br/><br/>
                 <h4>Size</h4>
                 <br/><br/>
                 <i-button-group size="large">
-                    <i-button type="ghost">Large</i-button>
-                    <i-button type="ghost">Large</i-button>
+                    <i-button>Large</i-button>
+                    <i-button>Large</i-button>
                 </i-button-group>
                 <i-button-group>
-                    <i-button type="ghost">Default</i-button>
-                    <i-button type="ghost">Default</i-button>
+                    <i-button>Default</i-button>
+                    <i-button>Default</i-button>
                 </i-button-group>
                 <i-button-group size="small">
-                    <i-button type="ghost">Small</i-button>
-                    <i-button type="ghost">Small</i-button>
+                    <i-button>Small</i-button>
+                    <i-button>Small</i-button>
                 </i-button-group>
                 <br/><br/>
                 <i-button-group size="large" shape="circle">
-                    <i-button type="ghost">Large</i-button>
-                    <i-button type="ghost">Large</i-button>
+                    <i-button>Large</i-button>
+                    <i-button>Large</i-button>
                 </i-button-group>
                 <i-button-group shape="circle">
-                    <i-button type="ghost">Default</i-button>
-                    <i-button type="ghost">Default</i-button>
+                    <i-button>Default</i-button>
+                    <i-button>Default</i-button>
                 </i-button-group>
                 <i-button-group size="small" shape="circle">
-                    <i-button type="ghost">Small</i-button>
-                    <i-button type="ghost">Small</i-button>
+                    <i-button>Small</i-button>
+                    <i-button>Small</i-button>
                 </i-button-group>
             </template>
             <template slot="desc">
@@ -218,10 +214,10 @@
         <u-example title="按钮组纵向排列">
             <template slot="case">
                 <i-button-group vertical>
-                    <i-button type="ghost" icon="social-facebook"></i-button>
-                    <i-button type="ghost" icon="social-twitter"></i-button>
-                    <i-button type="ghost" icon="social-googleplus"></i-button>
-                    <i-button type="ghost" icon="social-tumblr"></i-button>
+                    <i-button icon="logo-facebook"></i-button>
+                    <i-button icon="logo-twitter"></i-button>
+                    <i-button icon="logo-googleplus"></i-button>
+                    <i-button icon="logo-tumblr"></i-button>
                 </i-button-group>
             </template>
             <template slot="desc">
@@ -245,8 +241,14 @@
                 <tbody>
                     <tr>
                         <td>type</td>
-                        <td>按钮类型，可选值为<code>primary</code>、<code>ghost</code>、<code>dashed</code>、<code>text</code>、<code>info</code>、<code>success</code>、<code>warning</code>、<code>error</code>或者不设置</td>
+                        <td>按钮类型，可选值为<code>primary</code>、<code>dashed</code>、<code>text</code>、<code>info</code>、<code>success</code>、<code>warning</code>、<code>error</code>或者不设置</td>
                         <td>String</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>ghost</td>
+                        <td>幽灵属性，使按钮背景透明</td>
+                        <td>Boolean</td>
                         <td>-</td>
                     </tr>
                     <tr>

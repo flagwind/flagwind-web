@@ -18,11 +18,11 @@ gulp.task("css", function()
 });
 
 // 拷贝字体文件
-gulp.task("fonts", function ()
-{
-    // 拷贝 iview 使用的字体文件
-    gulp.src("../src/styles/iview/common/iconfont/fonts/*.*")
-        .pipe(gulp.dest("../dist/styles/fonts"));
-});
+// gulp.task("fonts", function ()
+// {
+//     // 拷贝 iview 使用的字体文件
+//     gulp.src("../src/styles/iview/common/iconfont/fonts/*.*")
+//         .pipe(gulp.dest("../dist/styles/fonts"));
+// });
 
-gulp.task("default", ["css", "fonts"]);
+gulp.task("default", ["css"]);

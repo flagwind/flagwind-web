@@ -29,6 +29,7 @@ module.exports = merge(webpackBaseConfig,
         },
         "vue-router": "vue-router",
         "vuex": "vuex",
+        "iview": "iview",
         "flagwind-core": "flagwind-core"
     },
     plugins: 
