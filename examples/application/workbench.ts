@@ -29,6 +29,7 @@ import Generic from "examples/layouts/generic.vue";
 import Article from "examples/layouts/article.vue";
 
 // 倒入全局样式
+import "iview/dist/styles/iview.css";
 import "src/styles/index.less";
 import "examples/styles/index.less";
 

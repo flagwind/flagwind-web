@@ -432,17 +432,9 @@ export default class EditField extends Component
             }
             case EditComponentTypes.select:
             {
-                if(editComponent.multiple)
-                {
-                    // 如果下拉组件可多选，则联合所选值的标签
-                    const labels = editComponent.selectedMultiple.map((item: any) => item.label);
+                const labels = editComponent.values.map((item: any) => item.label);
                     
-                    this.displayValue = labels.join(this.separator);
-                }
-                else
-                {
-                    this.displayValue = editComponent.selectedSingle;
-                }
+                this.displayValue = labels.join(this.separator);
 
                 break;
             }

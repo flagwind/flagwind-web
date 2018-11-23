@@ -1,16 +1,15 @@
 {
     "name": "flagwind-web",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "description": "flagwind web library",
     "author": "jason <jasonsoop@gmail.com>",
     "scripts": {
         "dev": "webpack-dev-server --content-base test/ --open --inline --hot --compress --history-api-fallback --port 8010 --config build/webpack.dev.config.js",
         "dist:clean": "node build/build.clean.js",
         "dist:style": "gulp --gulpfile build/gulp.build.style.js",
-        "dist:typing": "node build/build.typing.js",
         "dist:debug": "webpack --config build/webpack.dist.debug.config.js",
         "dist:release": "webpack --config build/webpack.dist.release.config.js",
-        "dist": "npm run dist:clean && npm run dist:style && npm run dist:debug && npm run dist:release && npm run dist:typing",
+        "dist": "npm run dist:clean && npm run dist:style && npm run dist:debug && npm run dist:release",
         "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
         "test": "npm run unit"
     },
@@ -34,13 +33,13 @@
     },
     "dependencies": {
         "equals": "^1.0.5",
-        "iview": "^2.13.1",
         "vue-class-component": "^6.2.0",
         "vue-property-decorator": "^6.0.0"
     },
     "peerDependencies": {
         "flagwind-core": "^1.1.0",
-        "vue": "^2.5.7"
+        "vue": "^2.5.7",
+        "iview": "^3.1.5"
     },
     "devDependencies": {
         "@types/chai": "^4.0.4",
@@ -68,9 +67,9 @@
         "friendly-errors-webpack-plugin": "^1.6.1",
         "fs-extra": "^5.0.0",
         "gulp": "^3.9.1",
-        "gulp-autoprefixer": "^4.0.0",
-        "gulp-clean-css": "^3.9.0",
-        "gulp-less": "^3.3.2",
+        "gulp-autoprefixer": "^5.0.0",
+        "gulp-clean-css": "^3.9.3",
+        "gulp-less": "^4.0.0",
         "gulp-rename": "^1.2.2",
         "highlight.js": "^9.12.0",
         "html-loader": "^0.5.1",
@@ -86,7 +85,7 @@
         "karma-spec-reporter": "0.0.31",
         "karma-webpack": "^2.0.2",
         "less": "^2.7.3",
-        "less-loader": "^4.0.5",
+        "less-loader": "^4.0.6",
         "mocha": "^4.0.1",
         "phantomjs-prebuilt": "^2.1.16",
         "postcss-import": "^11.0.0",
