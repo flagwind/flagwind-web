@@ -10,7 +10,7 @@
 
 import Vue from "vue";
 import flagwind from "flagwind-core";
-import { LoadingBar, Message, Modal, Notice, Spin } from "iview";
+import { LoadingBar, Message, Modal, Notice, Spin, ModalInstance } from "iview";
 import iview from "../components/iview";
 
 const components: any = iview;
@@ -55,7 +55,7 @@ export class Component extends Vue
      * 获取一个全局模态框实例。
      * @returns Modal
      */
-    protected get $modal(): Modal
+    protected get $modal(): ModalInstance
     {
         return components.Modal;
     }
