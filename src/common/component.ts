@@ -10,7 +10,7 @@
 
 import Vue from "vue";
 import flagwind from "flagwind-core";
-import { LoadingBar, Message, Modal, Notice, Spin, ModalInstance } from "iview";
+import { LoadingBar, Message, Notice, Spin, ModalInstance } from "iview";
 import iview from "../components/iview";
 
 const components: any = iview;
