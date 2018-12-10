@@ -9,7 +9,7 @@
  */
 
 import component, { mixins } from "vue-class-component";
-import { Prop as config, Model as model, Watch as watch, Inject as inject, Provide as provice } from "vue-property-decorator";
+import { Prop as config, Model as model, Watch as watch, Inject as inject, Provide as provide } from "vue-property-decorator";
 
 // 注册路由相关钩子函数
 component.registerHooks
@@ -19,4 +19,4 @@ component.registerHooks
     "beforeRouteUpdate"
 ]);
 
-export { component, mixins, config, model, watch, inject, provice };
+export { component, mixins, config, model, watch, inject, provide };
